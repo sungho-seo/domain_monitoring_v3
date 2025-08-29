@@ -3,8 +3,8 @@
 """
 audit_cname_status.py (FULL, fixed)
 - 입력:   ../data/<DATE>/CNAME_*.csv
-- 출력:   ../data/<DATE>/output/report_<domain>_<DATE>.csv
-          ../data/<DATE>/output/summary_all_<DATE>.csv  (파일명은 필요시 변경)
+- 출력:   ../data/<DATE>/output/report_cname_<domain>.csv
+          ../data/<DATE>/output/summary_all.csv  (파일명은 필요시 변경)
 
 판정(status):
 - OK
@@ -278,7 +278,7 @@ async def process_csv(checker: CNAMEChecker,
             extra = f" -> {val}" if ok else ""
             p(f"[CNAME] {done}/{total} {checker.brief(fqdn_i)} {tag}{extra}")
         elif checker.progress_every and (done % checker.progress_every == 0 or done == total):
-            p(f"[PROG] {csv_path.name}: {done}/{total}")
+            p(f"[PROG] {csv_path.name}: {done}/{total} last={checker.brief(fqdn_i)} {tag}{extra}")
 
     # 1차 결과 정리
     basic_rows = []
@@ -412,7 +412,7 @@ async def run(date: str,
         all_df.append(df)
 
         # ↓ 필요 시 여기서 파일명 규칙만 바꾸세요
-        outfile = outdir / f"report_{origin}_{date}.csv"
+        outfile = outdir / f"report_cname_{origin}.csv"
         df.to_csv(outfile, index=False, encoding="utf-8")
         ok = int((df["status"] == "OK").sum())
         mm = int((df["status"] == "MISMATCH").sum())
@@ -428,7 +428,7 @@ async def run(date: str,
 
     summary = pd.concat(all_df, ignore_index=True)
     # ↓ 필요 시 여기서 summary 파일명만 바꾸세요
-    sumfile = outdir / f"summary_all_{date}.csv"
+    sumfile = outdir / f"summary_all.csv"
     summary.to_csv(sumfile, index=False, encoding="utf-8")
 
     s_ok = int((summary["status"] == "OK").sum())
