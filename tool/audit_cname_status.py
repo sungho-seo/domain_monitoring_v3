@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-CNAME 대량 검사기 (비동기, 날짜/도메인별 산출물)
+audit_cname_status.py
 - 입력:   ../data/<DATE>/CNAME_*.csv
-- 출력:   ../data/<DATE>/output/report_<domain>_<DATE>.csv
+- 출력:   ../data/<DATE>/output/report_<domain>_<DATE>.csv, summary_all_<DATE>.csv
 - CSV 헤더: Label/Name,Type,R Data
 
-개선 사항
-- source_csv 컬럼 제거
-- expected(R Data)가 상대 이름이면 origin 붙여 FQDN으로 확장 후 비교
-- CNAME 대상(체인)을 추적하여 최종 A/AAAA 존재 여부 확인
-- DKIM/ACM/검증용 CNAME 등은 추적 스킵 → NO_ANSWER(PASS)
-- 내부 전용 네이밍 의심 → NO_ANSWER(CHECK_INTERNAL)
-- 그 외 응답 없음 → NO_ANSWER(LIKELY_UNUSED)
+status 값:
+- OK
+- MISMATCH
+- NO_ANSWER(PASS)
+- NO_ANSWER(CHECK_INTERNAL)
+- NO_ANSWER(LIKELY_UNUSED)
 """
 
 import argparse
@@ -30,7 +29,6 @@ import dns.exception
 
 PUBLIC_RESOLVERS = ["8.8.8.8", "1.1.1.1", "9.9.9.9"]
 
-# === 예외 패턴 (PASS 처리) ===
 PASS_PATTERNS = [
     r"\._domainkey(\.|$)",            # DKIM selector
     r"dkim\.amazonses\.com$",         # SES DKIM
@@ -38,18 +36,18 @@ PASS_PATTERNS = [
     r"comodoca\.com$",                # Comodo/DigiCert 검증
     r"_amazonses\.",                  # SES 검증
 ]
-
-# === 내부 전용 네이밍 의심 패턴 ===
 INTERNAL_PATTERNS = [
     r"\.hlp(\.|$)",
     r"\.pcservice(\.|$)",
-    r"\.st-",          # staging
-    r"\.dev(\.|$)",    # dev
-    r"\.qa(\.|$)",     # qa
+    r"\.st-",          # staging prefix
+    r"\.dev(\.|$)",
+    r"\.qa(\.|$)",
 ]
 
+# ---------- util ----------
+def p(msg: str):
+    print(msg, flush=True)
 
-# ---------- utils ----------
 def norm_name(s: str) -> str:
     return (s or "").strip().rstrip(".").lower()
 
@@ -79,8 +77,7 @@ def normalize_expected(expected: str, origin: Optional[str]) -> str:
 def compile_patterns(patterns: List[str]) -> List[re.Pattern]:
     return [re.compile(p, re.IGNORECASE) for p in patterns]
 
-
-# ---------- DNS helper ----------
+# ---------- DNS ----------
 class AsyncDNS:
     def __init__(self, resolvers: List[str], timeout: float):
         self.resolvers = resolvers
@@ -112,15 +109,13 @@ class AsyncDNS:
                 pass
         return None
 
-
-# ---------- CNAME checker ----------
+# ---------- Checker ----------
 class CNAMEChecker:
     def __init__(self, concurrency: int, timeout: float, retries: int, resolvers: List[str],
-                 pass_res: List[re.Pattern], internal_res: List[re.Pattern]):
+                 pass_res, internal_res):
         self.sem = asyncio.Semaphore(concurrency)
         self.timeout = timeout
         self.retries = retries
-        self.resolvers = resolvers
         self.dns = AsyncDNS(resolvers, timeout)
         self.cache_cname: Dict[str, Tuple[bool, str]] = {}
         self.pass_res = pass_res
@@ -134,11 +129,9 @@ class CNAMEChecker:
         n = norm_name(name)
         return any(p.search(n) for p in self.internal_res)
 
-    async def query_cname_once(self, fqdn: str) -> Optional[str]:
+    async def _query_cname_once(self, fqdn: str) -> Optional[str]:
         vals = await self.dns.query(fqdn, "CNAME")
-        if vals:
-            return vals[0]
-        return None
+        return vals[0] if vals else None
 
     async def query_cname(self, fqdn: str) -> Tuple[bool, str]:
         key = norm_name(fqdn)
@@ -148,7 +141,7 @@ class CNAMEChecker:
         async with self.sem:
             last_err = "no answer"
             for _ in range(self.retries + 1):
-                cname = await self.query_cname_once(fqdn)
+                cname = await self._query_cname_once(fqdn)
                 if cname:
                     res = (True, cname)
                     self.cache_cname[key] = res
@@ -158,41 +151,38 @@ class CNAMEChecker:
             self.cache_cname[key] = res
             return res
 
-    async def trace_to_address(self, start_name: str) -> Tuple[str, str]:
-        """
-        CNAME 체인을 따라 최종 A/AAAA 확인
-        return: (final_target, status_subtype)
-        """
-        if self._is_pass(start_name):
-            return (norm_name(start_name), "NO_ANSWER(PASS)")
+    async def classify_no_answer(self, fqdn: str) -> str:
+        """NO_ANSWER 세분화 → PASS / CHECK_INTERNAL / LIKELY_UNUSED"""
+        if self._is_pass(fqdn):
+            return "NO_ANSWER(PASS)"
+        if self._is_internal(fqdn):
+            return "NO_ANSWER(CHECK_INTERNAL)"
 
-        if self._is_internal(start_name):
-            return (norm_name(start_name), "NO_ANSWER(CHECK_INTERNAL)")
-
-        # 추적 시도
-        current = start_name if start_name.endswith(".") else start_name + "."
-        depth = 0
+        # 체인 추적: 주소 나오면 사실 NO_ANSWER가 아니었을 가능성(리졸버 일시 문제)
+        # 주소가 끝내 안 나오면 LIKELY_UNUSED
+        current = fqdn if fqdn.endswith(".") else fqdn + "."
         seen = set()
-        while depth < 10:
-            depth += 1
+        for _ in range(10):
             nn = norm_name(current)
             if nn in seen:
-                return (nn, "NO_ANSWER(LIKELY_UNUSED)")
+                return "NO_ANSWER(LIKELY_UNUSED)"
             seen.add(nn)
 
             a_vals = await self.dns.query(current, "A")
             aaaa_vals = await self.dns.query(current, "AAAA")
             if a_vals or aaaa_vals:
-                return (nn, "ADDR_FOUND")
+                # 주소가 나왔는데도 원래 CNAME 질의에서 NO_ANSWER였다면, 미묘한 케이스이긴 함.
+                # 여기선 굳이 승격하지 않고 LIKELY_UNUSED가 아님을 표시하려면 PASS로 완화할 수도 있지만,
+                # 보수적으로 LIKELY_UNUSED는 피하고 OK/MISMATCH 대상이 아니므로 PASS로 표기.
+                return "NO_ANSWER(PASS)"
 
             cname_vals = await self.dns.query(current, "CNAME")
             if not cname_vals:
-                return (nn, "NO_ANSWER(LIKELY_UNUSED)")
+                return "NO_ANSWER(LIKELY_UNUSED)"
             current = cname_vals[0]
-        return (norm_name(current), "NO_ANSWER(LIKELY_UNUSED)")
+        return "NO_ANSWER(LIKELY_UNUSED)"
 
-
-# ---------- CSV processing ----------
+# ---------- CSV ----------
 def origin_from_filename(csv_path: Path) -> Optional[str]:
     m = re.match(r"CNAME_(.+)\.csv$", csv_path.name, re.IGNORECASE)
     return m.group(1) if m else None
@@ -204,6 +194,10 @@ async def process_csv(checker: CNAMEChecker, csv_path: Path, origin: str) -> pd.
 
     with csv_path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
+        required = {"Label/Name", "Type", "R Data"}
+        if not required.issubset(reader.fieldnames or []):
+            raise RuntimeError(f"{csv_path}: CSV 헤더에 {required} 필요. 현재: {reader.fieldnames}")
+
         for line in reader:
             if (line.get("Type") or "").strip().upper() != "CNAME":
                 continue
@@ -213,63 +207,100 @@ async def process_csv(checker: CNAMEChecker, csv_path: Path, origin: str) -> pd.
             items.append((fqdn, expected_norm, raw))
             tasks.append(checker.query_cname(fqdn))
 
+    p(f"[INFO] {csv_path.name}: querying {len(tasks)} records...")
     results = await asyncio.gather(*tasks)
 
+    out_rows = []
     for (fqdn, expected_norm, raw), (ok, actual_or_err) in zip(items, results):
         if ok:
             actual_norm = norm_name(actual_or_err)
             status = "OK" if (actual_norm == expected_norm) else "MISMATCH"
-            rows.append({
-                "origin": origin,
-                "label_or_name": raw,
-                "fqdn": norm_name(fqdn),
-                "expected": expected_norm,
-                "actual": actual_norm,
-                "status": status,
-            })
         else:
-            # NO_ANSWER 세분화
-            final_target, subtype = await checker.trace_to_address(fqdn)
-            rows.append({
-                "origin": origin,
-                "label_or_name": raw,
-                "fqdn": norm_name(fqdn),
-                "expected": expected_norm,
-                "actual": "",
-                "status": subtype,
-            })
+            status = await checker.classify_no_answer(fqdn)
 
-    return pd.DataFrame(rows)
+        out_rows.append({
+            "origin": origin,
+            "label_or_name": raw,
+            "fqdn": norm_name(fqdn),
+            "expected": expected_norm,
+            "actual": actual_norm if ok else "",
+            "status": status,
+        })
 
+    df = pd.DataFrame(out_rows)
+    ok = int((df["status"] == "OK").sum())
+    mm = int((df["status"] == "MISMATCH").sum())
+    pass_n = int((df["status"] == "NO_ANSWER(PASS)").sum())
+    ci_n = int((df["status"] == "NO_ANSWER(CHECK_INTERNAL)").sum())
+    lu_n = int((df["status"] == "NO_ANSWER(LIKELY_UNUSED)").sum())
+    p(f"[DONE] {csv_path.name} | OK:{ok} MISMATCH:{mm} PASS:{pass_n} INTERNAL?:{ci_n} LIKELY_UNUSED:{lu_n}")
+    return df
 
 # ---------- runner ----------
 async def run(date: str, concurrency: int, timeout: float, retries: int, resolvers: List[str]) -> None:
-    base = (Path(__file__).resolve().parent / ".." / "data" / date).resolve()
+    script_dir = Path(__file__).resolve().parent
+    base = (script_dir / ".." / "data" / date).resolve()
+    p(f"[BOOT] audit_cname_status start | date={date}")
+    p(f"[PATH] input_dir={base}")
+
+    if not base.exists():
+        p(f"[ERROR] 입력 폴더 없음: {base}")
+        sys.exit(2)
+
+    csv_files = sorted(p for p in base.glob("CNAME_*.csv") if p.is_file())
+    if not csv_files:
+        p(f"[ERROR] CSV가 없습니다: {base}/CNAME_*.csv")
+        sys.exit(2)
+
     outdir = base / "output"
     outdir.mkdir(parents=True, exist_ok=True)
+    p(f"[PATH] output_dir={outdir}")
+    p(f"[INFO] files={', '.join(x.name for x in csv_files)}")
 
-    csv_files = sorted(p for p in base.glob("CNAME_*.csv"))
     pass_res = compile_patterns(PASS_PATTERNS)
     internal_res = compile_patterns(INTERNAL_PATTERNS)
     checker = CNAMEChecker(concurrency, timeout, retries, resolvers, pass_res, internal_res)
 
     all_df: List[pd.DataFrame] = []
-    for p in csv_files:
-        origin = origin_from_filename(p) or ""
+    for csv_path in csv_files:
+        origin = origin_from_filename(csv_path) or ""
         if not origin:
+            p(f"[WARN] 파일명에서 도메인을 못 읽음: {csv_path.name} (건너뜀)")
             continue
-        df = await process_csv(checker, p, origin)
+        p(f"[WORK] Processing {csv_path.name} (origin={origin})")
+        df = await process_csv(checker, csv_path, origin)
         all_df.append(df)
-        df.to_csv(outdir / f"report_{origin}_{date}.csv", index=False, encoding="utf-8")
+        outfile = outdir / f"report_{origin}_{date}.csv"
+        df.to_csv(outfile, index=False, encoding="utf-8")
+        p(f"[SAVE] {outfile}")
 
-    if all_df:
-        summary = pd.concat(all_df, ignore_index=True)
-        summary.to_csv(outdir / f"summary_all_{date}.csv", index=False, encoding="utf-8")
+    if not all_df:
+        p("[ERROR] 처리된 데이터가 없습니다.")
+        sys.exit(2)
 
+    summary = pd.concat(all_df, ignore_index=True)
+    s_ok  = int((summary["status"] == "OK").sum())
+    s_mm  = int((summary["status"] == "MISMATCH").sum())
+    s_ps  = int((summary["status"] == "NO_ANSWER(PASS)").sum())
+    s_ci  = int((summary["status"] == "NO_ANSWER(CHECK_INTERNAL)").sum())
+    s_lu  = int((summary["status"] == "NO_ANSWER(LIKELY_UNUSED)").sum())
+    s_tot = len(summary)
+
+    sumfile = outdir / f"summary_all_{date}.csv"
+    summary.to_csv(sumfile, index=False, encoding="utf-8")
+
+    p("\n==== SUMMARY ({}) ====".format(date))
+    p(f"Total:     {s_tot}")
+    p(f"OK:        {s_ok}")
+    p(f"MISMATCH:  {s_mm}")
+    p(f"PASS:      {s_ps}")
+    p(f"INTERNAL?: {s_ci}")
+    p(f"LIKELY_UNUSED: {s_lu}")
+    p(f"[SAVED] {sumfile}")
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--date", required=True)
+    ap = argparse.ArgumentParser(description="Audit CNAME status with NO_ANSWER subtypes")
+    ap.add_argument("--date", required=True, help="YYYYMMDD")
     ap.add_argument("--concurrency", type=int, default=300)
     ap.add_argument("--timeout", type=float, default=3.0)
     ap.add_argument("--retries", type=int, default=2)
@@ -277,8 +308,17 @@ def main():
     args = ap.parse_args()
 
     resolvers = [x.strip() for x in args.resolvers.split(",") if x.strip()]
-    asyncio.run(run(args.date, args.concurrency, args.timeout, args.retries, resolvers))
 
+    try:
+        asyncio.run(run(args.date, args.concurrency, args.timeout, args.retries, resolvers))
+    except KeyboardInterrupt:
+        p("\n[INTERRUPTED]")
+        sys.exit(130)
 
 if __name__ == "__main__":
+    # 즉시 출력되도록 파이썬 버퍼링 우회 (터미널에서 -u 없이도)
+    try:
+        sys.stdout.reconfigure(line_buffering=True)
+    except Exception:
+        pass
     main()
