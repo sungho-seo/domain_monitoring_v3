@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domain Monitoring v3 (PRD 기반 스켈레톤)</title>
+  <style>
+    :root{
+      --bg:#f8fafc;            /* 밝은 배경 */
+      --card:#ffffff;          /* 카드 배경 */
+      --muted:#64748b;         /* 보조 텍스트 */
+      --text:#0f172a;          /* 본문 텍스트 */
+      --primary:#0ea5e9;       /* 포인트 */
+      --ok:#16a34a;            /* 정상 */
+      --warn:#f59e0b;          /* 경고 */
+      --danger:#ef4444;        /* 위험/중지 */
+      --neutral:#94a3b8;       /* 점검필요 */
+      --chip:#e2e8f0;          /* 칩 배경 */
+      --chip-text:#334155;     /* 칩 텍스트 */
+      --border:#e5e7eb;
+      --shadow:0 10px 20px rgba(2,6,23,.06), 0 2px 6px rgba(2,6,23,.04);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font:14px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    a{color:inherit}
+    .wrap{max-width:1200px;margin:24px auto;padding:0 16px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+    h1{font-size:20px;margin:0}
+    .sub{color:var(--muted)}
+
+    /* KPI */
+    .kpis{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin:16px 0}
+    .kpi{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:14px;box-shadow:var(--shadow)}
+    .kpi h3{margin:0 0 8px 0;font-size:13px;color:var(--muted)}
+    .kpi .val{display:flex;align-items:baseline;gap:8px}
+    .kpi .num{font-size:24px;font-weight:700}
+    .kpi .delta{font-size:12px;color:var(--muted)}
+    .kpi .pill{display:inline-block;padding:2px 8px;border-radius:999px;background:var(--chip);color:var(--chip-text);font-size:12px}
+    .kpi .btn{margin-top:8px;display:inline-block;font-size:12px;padding:6px 10px;border:1px solid var(--border);border-radius:10px;background:#fff;cursor:pointer}
+
+    /* Filters */
+    .filters{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:12px;display:grid;grid-template-columns:1.2fr 1.4fr 1fr 1fr;gap:12px;align-items:end;box-shadow:var(--shadow)}
+    label{font-size:12px;color:var(--muted)}
+    select,input[type="text"],input[type="number"]{width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:10px;background:#fff}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--chip);color:var(--chip-text);cursor:pointer;user-select:none}
+    .chip input{accent-color:var(--primary)}
+    .toggle{display:inline-flex;align-items:center;gap:8px}
+
+    /* Tabs */
+    .tabs{display:flex;gap:8px;margin:16px 0}
+    .tab{padding:10px 14px;border:1px solid var(--border);border-radius:12px;background:#fff;cursor:pointer}
+    .tab.active{border-color:var(--primary);box-shadow:0 0 0 2px rgba(14,165,233,.15)}
+
+    /* Tables */
+    table{width:100%;border-collapse:separate;border-spacing:0}
+    th,td{padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:middle}
+    thead th{position:sticky;top:0;background:var(--card);z-index:1}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:0;box-shadow:var(--shadow)}
+    .scroll{max-height:520px;overflow:auto;border-radius:16px}
+
+    .status{display:inline-flex;align-items:center;gap:6px;padding:4px 8px;border-radius:999px;font-size:12px}
+    .s-ok{background:#ecfdf5;color:var(--ok);border:1px solid #bbf7d0}
+    .s-warn{background:#fffbeb;color:var(--warn);border:1px solid #fde68a}
+    .s-danger{background:#fef2f2;color:var(--danger);border:1px solid #fecaca}
+    .s-neutral{background:#f1f5f9;color:var(--neutral);border:1px solid #e2e8f0}
+
+    .badge{display:inline-block;padding:2px 6px;border-radius:6px;border:1px solid var(--border);font-weight:500; /* bold 금지, 사용자 선호 */}
+
+    /* Grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+    .tile{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+    .shot{aspect-ratio:16/9;display:block;width:100%;object-fit:cover;background:#f1f5f9}
+    .tile .meta{padding:10px}
+    .actions{display:flex;gap:8px}
+    .iconbtn{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--border);border-radius:10px;background:#fff;cursor:pointer}
+
+    /* Modals */
+    dialog{border:none;border-radius:16px;box-shadow:0 20px 48px rgba(2,6,23,.25)}
+    dialog::backdrop{background:rgba(2,6,23,.45)}
+    .modal{min-width:560px;max-width:900px}
+    .modal header{padding:12px 16px;border-bottom:1px solid var(--border)}
+    .modal .body{padding:16px}
+    .modal .footer{padding:12px 16px;border-top:1px solid var(--border);display:flex;justify-content:flex-end;gap:8px}
+    .btn{padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:#fff;cursor:pointer}
+    .btn.primary{border-color:var(--primary);background:rgba(14,165,233,.08)}
+
+    .right{margin-left:auto}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>도메인 모니터링 대시보드</h1>
+        <div class="sub">PRD 기반 스켈레톤 · 밝은 테마</div>
+      </div>
+      <div class="row">
+        <button id="btnDownloadIgnore" class="btn">ignore.json 다운로드</button>
+        <label class="btn" style="position:relative;overflow:hidden">
+          ignore.json 불러오기
+          <input id="inputIgnoreFile" type="file" accept="application/json" style="position:absolute;inset:0;opacity:0;cursor:pointer"/>
+        </label>
+      </div>
+    </header>
+
+    <!-- KPI -->
+    <section class="kpis" id="kpis">
+      <!-- 7개 KPI: 총 도메인 / 인증서 만료 / 인증서 불일치 / 점검 필요 / 캡처 실패 / 서비스 중지 검토 / 정상 -->
+      <!-- 동적 렌더링 -->
+    </section>
+
+    <!-- Filters -->
+    <section class="filters">
+      <div>
+        <label>점검 날짜</label>
+        <div class="row">
+          <select id="selDate"></select>
+          <button class="btn" id="btnQuick7">최근 7일</button>
+          <button class="btn" id="btnQuick30">최근 30일</button>
+        </div>
+      </div>
+      <div>
+        <label>도메인 선택</label>
+        <div class="row">
+          <select id="selDomains" multiple size="4" style="min-width:240px"></select>
+          <button class="btn" id="btnFav">★ 즐겨찾기 우선</button>
+        </div>
+      </div>
+      <div>
+        <label>CNAME 포함</label>
+        <div class="row">
+          <label class="toggle"><input type="checkbox" id="toggleCNAME"> 포함</label>
+          <span class="row">깊이 <input type="number" id="cnameDepth" min="1" max="10" value="3" style="width:70px"> </span>
+        </div>
+      </div>
+      <div>
+        <label>추가 필터</label>
+        <div class="row">
+          <label class="chip"><input type="checkbox" data-status="정상"> 정상</label>
+          <label class="chip"><input type="checkbox" data-status="경고"> 경고</label>
+          <label class="chip"><input type="checkbox" data-status="위험"> 위험</label>
+          <label class="chip"><input type="checkbox" data-status="점검필요"> 점검필요</label>
+          <label class="chip"><input type="checkbox" data-status="중지검토"> 중지검토</label>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="domain">도메인</button>
+      <button class="tab" data-tab="shots">스크린샷</button>
+      <button class="tab" data-tab="ssl">SSL 뷰어</button>
+      <span class="right sub">.badge는 font-weight: 500 규칙 유지</span>
+    </nav>
+
+    <!-- Domain Tab -->
+    <section id="panel-domain" class="card">
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>도메인</th>
+              <th>상태</th>
+              <th>마지막 점검</th>
+              <th>만료일</th>
+              <th>응답(ms)</th>
+              <th>IP</th>
+              <th>CNAME 체인</th>
+              <th>액션</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyDomains"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Shots Tab -->
+    <section id="panel-shots" class="card" style="display:none;padding:12px">
+      <div class="row" style="margin:8px 0 12px 0">
+        <span class="badge">HTTP 응답 필터</span>
+        <label class="chip"><input type="checkbox" data-http="2xx"> 2xx</label>
+        <label class="chip"><input type="checkbox" data-http="3xx"> 3xx</label>
+        <label class="chip"><input type="checkbox" data-http="4xx"> 4xx</label>
+        <label class="chip"><input type="checkbox" data-http="5xx"> 5xx</label>
+        <label class="chip"><input type="checkbox" data-http="text"> 텍스트만</label>
+        <label class="chip"><input type="checkbox" data-http="error"> 오류</label>
+      </div>
+      <div id="gridShots" class="grid"></div>
+    </section>
+
+    <!-- SSL Tab -->
+    <section id="panel-ssl" class="card" style="display:none">
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>도메인</th>
+              <th>발급자</th>
+              <th>유효기간</th>
+              <th>CN / SAN</th>
+              <th>알고리즘</th>
+              <th>체인</th>
+              <th>취약점</th>
+            </tr>
+          </thead>
+          <tbody id="tbodySSL"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <!-- Raw data & Image modals -->
+  <dialog id="dlgRaw" class="modal">
+    <header><strong>RAW DATA</strong></header>
+    <div class="body">
+      <pre id="preRaw" style="white-space:pre-wrap"></pre>
+    </div>
+    <div class="footer"><button class="btn" onclick="dlgRaw.close()">닫기</button></div>
+  </dialog>
+
+  <dialog id="dlgImg" class="modal">
+    <header><strong>스크린샷</strong></header>
+    <div class="body">
+      <img id="imgModal" src="" alt="screenshot" style="max-width:100%;border:1px solid var(--border);border-radius:12px"/>
+    </div>
+    <div class="footer"><button class="btn" onclick="dlgImg.close()">닫기</button></div>
+  </dialog>
+
+  <script type="module">
+  // =============================
+  // Config & Utilities
+  // =============================
+  const DOMAINS = ["lge.com","lge.co.kr","lgthinq.com"]; // 기본 옵션
+  const DATE_FALLBACK = new Date().toISOString().slice(0,10).replaceAll('-','');
+
+  const PATHS = {
+    dataRoot: (date) => `data/${date}/`,
+    csv: (date, domain) => `data/${date}/${domain}.csv`,
+    cnameCsv: (date, domain) => `data/${date}/CNAME_${domain}.csv`,
+    sslCsv: (date, domain) => `data/${date}/ssl_audit_${domain}.csv`,
+    sslCnameCsv: (date, domain) => `data/${date}/ssl_audit_CNAME_${domain}.csv`,
+    shotsRoot: (domain) => `images/img.${domain}/`,
+    shots: (domain, date) => `images/img.${domain}/${date}/`,
+    failsCsv: (domain, date) => `images/img.${domain}/${date}/failures.csv`,
+    ignoreJson: `output/ignore.json`,
+  };
+  const SHOT_NAME_RE = /^(?<input>.+)_to_(?<final>.+)_(?<date>\d{8})_(?<time>\d{6})\.png$/;
+
+  async function fetchMaybe(url){
+    try{
+      const r = await fetch(url, {cache:'no-store'});
+      if(!r.ok) throw 0; return await r.text();
+    }catch{ return null; }
+  }
+  async function fetchJSONMaybe(url){
+    try{
+      const r = await fetch(url, {cache:'no-store'});
+      if(!r.ok) throw 0; return await r.json();
+    }catch{ return null; }
+  }
+
+  // Minimal CSV parser (handles quotes)
+  function parseCSV(text){
+    if(!text) return [];
+    const lines = text.replace(/\r/g,'').split('\n').filter(l=>l.trim().length>0);
+    if(lines.length===0) return [];
+    const parseLine = (line)=>{
+      const out=[]; let cur=''; let inQ=false; for(let i=0;i<line.length;i++){
+        const c=line[i];
+        if(c==='"'){
+          if(inQ && line[i+1]==='"'){ cur+='"'; i++; }
+          else inQ=!inQ;
+        } else if(c===',' && !inQ){ out.push(cur); cur=''; }
+        else cur+=c;
+      } out.push(cur); return out;
+    };
+    const header = parseLine(lines[0]).map(h=>h.trim());
+    return lines.slice(1).map(l=>{
+      const cells = parseLine(l);
+      const row={}; header.forEach((h,idx)=> row[h]=cells[idx]??'');
+      return row;
+    });
+  }
+
+  // Directory index (.png list) from python http.server
+  async function listPngs(dirUrl){
+    const html = await fetchMaybe(dirUrl);
+    if(!html) return [];
+    const links = [...html.matchAll(/href=\"([^\"]+\.png)\"/g)].map(m=>decodeURIComponent(m[1]));
+    return links;
+  }
+
+  function endsWithDomain(host, domain){
+    return host===domain || host.endsWith('.'+domain);
+  }
+
+  function parseDate(s){
+    if(!s) return null;
+    const d = new Date(s); if(!isNaN(d)) return d;
+    // try YYYY-MM-DD or YYYYMMDD
+    if(/^\d{8}$/.test(s)){
+      const y=s.slice(0,4), m=s.slice(4,6), d=s.slice(6,8);
+      return new Date(`${y}-${m}-${d}T00:00:00Z`);
+    }
+    return null;
+  }
+
+  function fmtDate(d){
+    if(!d) return '-'; const y=d.getUTCFullYear();
+    const m=String(d.getUTCMonth()+1).padStart(2,'0');
+    const da=String(d.getUTCDate()).padStart(2,'0');
+    return `${y}-${m}-${da}`;
+  }
+
+  function daysTo(date){
+    if(!date) return null; const now=new Date();
+    return Math.floor((date - now)/86400000);
+  }
+
+  // Ignore set
+  let IGNORE = new Set();
+  function loadIgnoreFromJSON(obj){
+    if(!obj) return;
+    const arr = Array.isArray(obj)? obj : (obj.domains||[]);
+    IGNORE = new Set(arr.map(String));
+  }
+  function serializeIgnore(){
+    return JSON.stringify({domains:[...IGNORE].sort()}, null, 2);
+  }
+
+  // =============================
+  // State
+  // =============================
+  const state = {
+    dates: [],
+    date: null,
+    domains: [...DOMAINS],
+    includeCNAME: false,
+    cnameDepth: 3,
+    statusFilter: new Set(), // "정상" | "경고" | "위험" | "점검필요" | "중지검토"
+    httpBuckets: new Set(),  // 2xx | 3xx | 4xx | 5xx | text | error
+    favFirst: false,
+
+    // Data stores
+    rows: [],           // unified rows
+    shots: new Map(),   // domain -> screenshot path (first match)
+    failures: [],       // capture failures joined
+  };
+
+  // =============================
+  // Loading pipeline
+  // =============================
+  async function detectDates(){
+    // Try manifest
+    const arr = await fetchJSONMaybe('data/dates.json');
+    if(Array.isArray(arr) && arr.length>0){ return arr; }
+    // Fallback: try common last snapshots (manual)
+    return [new URL(location.href).searchParams.get('date') || DATE_FALLBACK];
+  }
+
+  async function loadAll(){
+    state.dates = await detectDates();
+    state.date = state.dates[0];
+    await tryLoadIgnore();
+    renderDateSelect();
+    renderDomainSelect();
+    await refreshData();
+    bindUI();
+  }
+
+  async function tryLoadIgnore(){
+    const obj = await fetchJSONMaybe(PATHS.ignoreJson);
+    if(obj) loadIgnoreFromJSON(obj);
+  }
+
+  function renderDateSelect(){
+    const sel = document.getElementById('selDate');
+    sel.innerHTML = state.dates.map(d=>`<option value="${d}">${d}</option>`).join('');
+    sel.value = state.date;
+  }
+
+  function renderDomainSelect(){
+    const sel = document.getElementById('selDomains');
+    sel.innerHTML = DOMAINS.map(d=>`<option value="${d}">${d}</option>`).join('');
+    // select all by default
+    [...sel.options].forEach(o=>o.selected=true);
+  }
+
+  async function refreshData(){
+    const date = state.date;
+    const selectedDomains = getSelectedDomains();
+
+    // Load base CSVs & CNAME CSVs
+    const baseRows = [];
+    for(const dom of selectedDomains){
+      const csv = await fetchMaybe(PATHS.csv(date, dom));
+      baseRows.push(...mapDomainCSV(parseCSV(csv), dom, false));
+      // CNAME source rows
+      const csvC = await fetchMaybe(PATHS.cnameCsv(date, dom));
+      baseRows.push(...mapDomainCSV(parseCSV(csvC), dom, true));
+    }
+
+    // SSL audit (base & CNAME)
+    const sslMap = new Map(); // key host -> ssl info
+    for(const dom of selectedDomains){
+      const a = await fetchMaybe(PATHS.sslCsv(date, dom));
+      mergeSSL(sslMap, parseCSV(a));
+      const b = await fetchMaybe(PATHS.sslCnameCsv(date, dom));
+      mergeSSL(sslMap, parseCSV(b));
+    }
+
+    // Failures & Shots mapping
+    state.failures = [];
+    state.shots = new Map();
+    for(const dom of selectedDomains){
+      const fcsv = await fetchMaybe(PATHS.failsCsv(dom, date));
+      if(fcsv){
+        const fr = parseCSV(fcsv).map(r=>({domain:dom,...r}));
+        state.failures.push(...fr);
+      }
+      // discover screenshots via directory index
+      const links = await listPngs(PATHS.shots(dom, date));
+      for(const href of links){
+        const m = href.match(SHOT_NAME_RE); if(!m) continue;
+        const finalHost = (m.groups?.final||'').toLowerCase();
+        // assign only if matches base domain
+        if(endsWithDomain(finalHost, dom)){
+          // Prefer first assign
+          if(!state.shots.has(finalHost)) state.shots.set(finalHost, PATHS.shots(dom,date)+href);
+        }
+      }
+    }
+
+    // Join rows + SSL + shots + failures mapping
+    const joined = baseRows.map(r=>{
+      const ssl = sslMap.get((r.host||r.domain||'').toLowerCase()) || {};
+      const finalHost = (r.host||r.domain||'').toLowerCase();
+      const shotPath = state.shots.get(finalHost) || null;
+      const o = unify(r, ssl, shotPath);
+      return o;
+    });
+
+    state.rows = joined;
+    renderAll();
+  }
+
+  // Map domain CSV rows into basic fields
+  function mapDomainCSV(rows, baseDomain, isCNAME){
+    if(!Array.isArray(rows)) return [];
+    return rows.map(r=>{
+      // Heuristic field mapping
+      const domain = (r.domain || r.host || r.hostname || '').toLowerCase();
+      const ip = r.ip || r.ip_address || r.A || '';
+      const http_status = +(r.http_status_final||r.http_status||'');
+      const response_ms = +(r.response_ms||r.latency_ms||r.response_time||'');
+      const last_checked = r.last_checked || r.timestamp || r.checked_at || '';
+      const cname_chain = (r.cname_chain || r.cname || '').split(/\s*[>,|]\s*|\s+/).filter(Boolean);
+      return {
+        baseDomain,
+        is_cname: !!isCNAME,
+        domain: domain || (r.final_url_host||'').toLowerCase(),
+        host: domain || (r.final_url_host||'').toLowerCase(),
+        ip, http_status, response_ms,
+        last_checked,
+        cname_chain
+      };
+    }).filter(x=>x.domain);
+  }
+
+  function mergeSSL(map, rows){
+    if(!Array.isArray(rows)) return;
+    for(const r of rows){
+      const host = (r.host || r.domain || r.hostname || r.final_url_host || '').toLowerCase();
+      if(!host) continue;
+      const rec = {
+        tls_handshake_ok: toBool(r.tls_handshake_ok, true),
+        cert_issuer: r.issuer_cn || r.cert_issuer || null,
+        cert_cn: r.cert_subject_cn || r.cert_cn || null,
+        cert_san: splitSAN(r.cert_san_list || r.san || ''),
+        valid_from_utc: r.not_before_utc || r.valid_from_utc || null,
+        valid_to_utc: r.not_after_utc || r.valid_to_utc || null,
+        days_to_expiry: numOrNull(r.days_to_expiry),
+        cert_algo: r.signature_algo || r.cert_algo || null,
+        chain_ok: parseTri(r.chain_ok),
+        cn_san_mismatch: toBool(r.hostname_match===''?false:(r.hostname_match||r.cn_san_mismatch), false)===false
+      };
+      map.set(host, rec);
+    }
+  }
+
+  function toBool(v, def=false){
+    if(v===true||v===false) return v;
+    const s=String(v||'').toLowerCase().trim();
+    if(['1','true','ok','y','yes'].includes(s)) return true;
+    if(['0','false','n','no'].includes(s)) return false;
+    return def;
+  }
+  function numOrNull(v){ const n=+v; return isNaN(n)? null:n; }
+  function splitSAN(s){
+    if(!s) return null;
+    return s.split(/[\s,;]+/).map(x=>x.trim()).filter(Boolean);
+  }
+  function parseTri(v){
+    if(v==null||v==='') return null; return toBool(v,true);
+  }
+
+  function unify(base, ssl, shotPath){
+    const vto = parseDate(ssl.valid_to_utc);
+    const days = ssl.days_to_expiry ?? (vto? daysTo(vto): null);
+    const hasScreenshot = !!shotPath;
+
+    // Status logic per PRD
+    let status = '정상';
+    if(ssl.tls_handshake_ok===false) status='중지검토';
+    else if((days??1)<0 || ssl.chain_ok===false) status='위험';
+    else if((days!=null && days<=30) || ssl.cn_san_mismatch===true) status='경고';
+    // 점검필요: 텍스트만/결측 등의 판단은 추후 보강, 우선 스크린샷 없음 + 핵심지표 결핍을 묶음
+    const coreMissing = (!base.http_status && !hasScreenshot);
+    if(status==='정상' && coreMissing) status='점검필요';
+    if(status==='정상' && !hasScreenshot) status='점검필요';
+    if(status==='정상' && !ssl.valid_to_utc) status='점검필요';
+    if(status==='정상' && ssl.cn_san_mismatch) status='경고';
+
+    return {
+      baseDomain: base.baseDomain,
+      is_cname: base.is_cname,
+      domain: base.domain,
+      host: base.host,
+      ip: base.ip||'',
+      last_checked: base.last_checked||'',
+      http_status: base.http_status||null,
+      response_ms: base.response_ms||null,
+      cname_chain: base.cname_chain||[],
+
+      tls_handshake_ok: ssl.tls_handshake_ok,
+      cert_issuer: ssl.cert_issuer,
+      cert_cn: ssl.cert_cn,
+      cert_san: ssl.cert_san,
+      valid_from_utc: ssl.valid_from_utc,
+      valid_to_utc: ssl.valid_to_utc,
+      days_to_expiry: days,
+      cert_algo: ssl.cert_algo,
+      chain_ok: ssl.chain_ok,
+      cn_san_mismatch: ssl.cn_san_mismatch,
+
+      has_screenshot: hasScreenshot,
+      screenshot_path: shotPath,
+      screenshot_type: hasScreenshot? 'normal': null,
+
+      capture_failed: false, // failures.csv 상세는 KPI에서만 사용 (확장 가능)
+      fail_reason: null,
+
+      status,
+      ignored: IGNORE.has(base.host||base.domain)
+    };
+  }
+
+  // =============================
+  // Renderers
+  // =============================
+  function renderAll(){
+    renderKPIs();
+    renderDomainTable();
+    renderShotsGrid();
+    renderSSLTable();
+  }
+
+  function kpiBuckets(){
+    const rows = filteredRowsBase();
+    const total = rows.length; // A + CNAME URL
+
+    const expired = rows.filter(r=> (r.days_to_expiry??1)<0 ).length;
+    const due7 = rows.filter(r=> (r.days_to_expiry!=null && r.days_to_expiry<=7 && r.days_to_expiry>=0)).length;
+    const due30 = rows.filter(r=> (r.days_to_expiry!=null && r.days_to_expiry<=30 && r.days_to_expiry>7)).length;
+
+    const mismatch = rows.filter(r=> r.cn_san_mismatch===true ).length;
+    const checkNeeded = rows.filter(r=> r.status==='점검필요').length; // 텍스트만 포함은 추후 이미지 OCR 로직 연결 시 확장
+
+    const fails = state.failures.length;
+    const stopReview = rows.filter(r=> r.tls_handshake_ok===false).length;
+    const ok = rows.filter(r=> r.status==='정상' && r.has_screenshot).length;
+
+    return {total, expired, due7, due30, mismatch, checkNeeded, fails, stopReview, ok};
+  }
+
+  function renderKPIs(){
+    const k = kpiBuckets();
+    const wrap = document.getElementById('kpis');
+    const btnFailCsv = `<button class="btn" id="btnDownloadFails">CSV 다운로드</button>`;
+
+    wrap.innerHTML = `
+      <div class="kpi"><h3>총 도메인</h3><div class="val"><span class="num">${k.total}</span></div><div class="pill">A + CNAME</div></div>
+      <div class="kpi"><h3>인증서 만료</h3><div class="val"><span class="num" style="color:var(--danger)">${k.expired}</span></div><div class="pill">만료 예정: 7일 ${k.due7} / 30일 ${k.due30}</div></div>
+      <div class="kpi"><h3>인증서 불일치</h3><div class="val"><span class="num" style="color:var(--warn)">${k.mismatch}</span></div><div class="pill">CN/SAN 불일치</div></div>
+      <div class="kpi"><h3>점검 필요</h3><div class="val"><span class="num">${k.checkNeeded}</span></div><div class="pill">텍스트만 + 누락</div></div>
+      <div class="kpi"><h3>캡처 실패</h3><div class="val"><span class="num">${k.fails}</span></div>${btnFailCsv}</div>
+      <div class="kpi"><h3>서비스 중지 검토</h3><div class="val"><span class="num" style="color:var(--danger)">${k.stopReview}</span></div><div class="pill">TLS 핸드셰이크 실패</div></div>
+      <div class="kpi"><h3>정상</h3><div class="val"><span class="num" style="color:var(--ok)">${k.ok}</span></div><div class="pill">정상 비율 ${(k.total? Math.round(k.ok*100/k.total):0)}%</div></div>
+    `;
+
+    // bind fail CSV
+    document.getElementById('btnDownloadFails')?.addEventListener('click', downloadFailsCsv);
+  }
+
+  function filteredRowsBase(){
+    const date = state.date;
+    const sel = getSelectedDomains();
+    return state.rows.filter(r=> sel.some(d=> endsWithDomain(r.baseDomain, d) || d===r.baseDomain));
+  }
+
+  function applyFilters(rows){
+    let out = rows.slice();
+    // status filters
+    if(state.statusFilter.size>0){ out = out.filter(r=> state.statusFilter.has(r.status)); }
+    // CNAME toggle (include or not)
+    if(!state.includeCNAME){ out = out.filter(r=> !r.is_cname); }
+    return out;
+  }
+
+  function statusPill(s){
+    const cls = s==='정상'? 's-ok': s==='경고'? 's-warn': s==='위험'||s==='중지검토'? 's-danger':'s-neutral';
+    return `<span class="status ${cls}">${s}</span>`;
+  }
+
+  function actionButtons(row){
+    const canImg = !!row.screenshot_path;
+    const isIgnored = IGNORE.has(row.host);
+    return `
+      <button class="iconbtn" data-act="raw" data-host="${row.host}">🔍 RAW</button>
+      <button class="iconbtn" data-act="img" data-host="${row.host}" ${canImg?'':'disabled'}>🖼 이미지</button>
+      ${isIgnored? `<button class="iconbtn" data-act="unignore" data-host="${row.host}">✅ Ignore 해제</button>`:
+                    `<button class="iconbtn" data-act="ignore" data-host="${row.host}">🚫 Ignore</button>`}
+    `;
+  }
+
+  function renderDomainTable(){
+    const rows = applyFilters(filteredRowsBase());
+    const tb = document.getElementById('tbodyDomains');
+    tb.innerHTML = rows.map(r=>{
+      const vto = fmtDate(parseDate(r.valid_to_utc));
+      const chain = r.cname_chain && r.cname_chain.length? `<span class="badge">${r.cname_chain.join(' → ')}</span>`: '';
+      return `<tr>
+        <td>${r.host}${IGNORE.has(r.host)? ' <span class="badge">Ignored</span>':''}</td>
+        <td>${statusPill(r.status)}</td>
+        <td>${r.last_checked||'-'}</td>
+        <td>${vto}</td>
+        <td>${r.response_ms??'-'}</td>
+        <td>${r.ip||'-'}</td>
+        <td>${chain}</td>
+        <td>${actionButtons(r)}</td>
+      </tr>`;
+    }).join('');
+
+    tb.querySelectorAll('button[data-act]').forEach(btn=>{
+      const act = btn.getAttribute('data-act');
+      const host = btn.getAttribute('data-host');
+      btn.addEventListener('click', ()=> onAction(act, host));
+    });
+  }
+
+  function httpBucketOf(code){
+    if(!code) return null;
+    if(code>=200 && code<300) return '2xx';
+    if(code>=300 && code<400) return '3xx';
+    if(code>=400 && code<500) return '4xx';
+    if(code>=500) return '5xx';
+    return null;
+  }
+
+  function renderShotsGrid(){
+    const rows = applyFilters(filteredRowsBase()).filter(r=>{
+      if(state.httpBuckets.size===0) return true;
+      const b = httpBucketOf(r.http_status);
+      if(b && state.httpBuckets.has(b)) return true;
+      if(state.httpBuckets.has('text') && r.screenshot_type==='text_only') return true;
+      if(state.httpBuckets.has('error') && (!r.screenshot_path)) return true;
+      return false;
+    });
+
+    const grid = document.getElementById('gridShots');
+    grid.innerHTML = rows.map(r=>{
+      const img = r.screenshot_path? `<img class="shot" src="${r.screenshot_path}" alt="${r.host}"/>` : `<div class="shot"></div>`;
+      const imgBtn = `<button class="iconbtn" data-act="img" data-host="${r.host}" ${r.screenshot_path?'':'disabled'}>🖼 이미지</button>`;
+      const rawBtn = `<button class="iconbtn" data-act="raw" data-host="${r.host}">🔍 RAW</button>`;
+      const ignoreBtn = IGNORE.has(r.host)? `<button class="iconbtn" data-act="unignore" data-host="${r.host}">✅ Ignore 해제</button>`:
+                                      `<button class="iconbtn" data-act="ignore" data-host="${r.host}">🚫 Ignore</button>`;
+      return `<div class="tile">
+        ${img}
+        <div class="meta">
+          <div style="display:flex;align-items:center;gap:8px;justify-content:space-between">
+            <strong>${r.host}</strong>
+            ${IGNORE.has(r.host)? '<span class="badge">Ignored</span>':''}
+          </div>
+          <div class="row" style="margin:8px 0">${statusPill(r.status)} <span class="badge">HTTP ${r.http_status??'-'}</span></div>
+          <div class="actions">${imgBtn}${rawBtn}${ignoreBtn}</div>
+        </div>
+      </div>`;
+    }).join('');
+
+    grid.querySelectorAll('button[data-act]')?.forEach(btn=>{
+      const act = btn.getAttribute('data-act');
+      const host = btn.getAttribute('data-host');
+      btn.addEventListener('click', ()=> onAction(act, host));
+    });
+  }
+
+  function renderSSLTable(){
+    const rows = applyFilters(filteredRowsBase());
+    const tb = document.getElementById('tbodySSL');
+    tb.innerHTML = rows.map(r=>{
+      const vfrom = fmtDate(parseDate(r.valid_from_utc));
+      const vto = fmtDate(parseDate(r.valid_to_utc));
+      const cn = r.cert_cn || '-';
+      const san = Array.isArray(r.cert_san)? r.cert_san.join(', ') : '-';
+      return `<tr>
+        <td>${r.host}</td>
+        <td>${r.cert_issuer||'-'}</td>
+        <td>${vfrom} ~ ${vto} ${r.days_to_expiry!=null? `<span class="badge">D${r.days_to_expiry>=0?'-':''}${Math.abs(r.days_to_expiry)}</span>`:''}</td>
+        <td>${cn} / <span class="badge">${san}</span></td>
+        <td>${r.cert_algo||'-'}</td>
+        <td>${r.chain_ok==null?'-': (r.chain_ok? '<span class="badge">OK</span>':'<span class="badge">Fail</span>')}</td>
+        <td><span class="badge">${r.cn_san_mismatch? 'CN/SAN 불일치':'-'}</span></td>
+      </tr>`;
+    }).join('');
+  }
+
+  // =============================
+  // Actions & Events
+  // =============================
+  function getSelectedDomains(){
+    const sel = document.getElementById('selDomains');
+    return [...sel.selectedOptions].map(o=>o.value);
+  }
+
+  function onAction(act, host){
+    const row = state.rows.find(r=>r.host===host);
+    if(!row) return;
+    if(act==='raw'){
+      document.getElementById('preRaw').textContent = JSON.stringify(row, null, 2);
+      document.getElementById('dlgRaw').showModal();
+    }else if(act==='img'){
+      if(row.screenshot_path){
+        document.getElementById('imgModal').src = row.screenshot_path;
+        document.getElementById('dlgImg').showModal();
+      }
+    }else if(act==='ignore'){
+      IGNORE.add(row.host);
+      renderAll();
+    }else if(act==='unignore'){
+      IGNORE.delete(row.host);
+      renderAll();
+    }
+  }
+
+  function bindUI(){
+    // Tabs
+    document.querySelectorAll('.tab').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.getAttribute('data-tab');
+        document.getElementById('panel-domain').style.display = tab==='domain'? 'block':'none';
+        document.getElementById('panel-shots').style.display = tab==='shots'? 'block':'none';
+        document.getElementById('panel-ssl').style.display   = tab==='ssl'? 'block':'none';
+      });
+    });
+
+    // Date
+    document.getElementById('selDate').addEventListener('change', (e)=>{ state.date=e.target.value; refreshData(); });
+    document.getElementById('btnQuick7').addEventListener('click',()=>{/* placeholder for range view */});
+    document.getElementById('btnQuick30').addEventListener('click',()=>{/* placeholder for range view */});
+
+    // Domains
+    document.getElementById('selDomains').addEventListener('change', ()=>{ refreshData(); });
+    document.getElementById('btnFav').addEventListener('click',()=>{ state.favFirst=!state.favFirst; /* TODO: order */});
+
+    // CNAME
+    document.getElementById('toggleCNAME').addEventListener('change', (e)=>{ state.includeCNAME=e.target.checked; renderAll(); });
+    document.getElementById('cnameDepth').addEventListener('change', (e)=>{ state.cnameDepth=+e.target.value; renderAll(); });
+
+    // Status chips
+    document.querySelectorAll('.filters [data-status]').forEach(ch=>{
+      ch.addEventListener('change', ()=>{
+        const v = ch.getAttribute('data-status');
+        if(ch.checked) state.statusFilter.add(v); else state.statusFilter.delete(v);
+        renderAll();
+      });
+    });
+
+    // HTTP chips (shots tab)
+    document.querySelectorAll('#panel-shots [data-http]').forEach(ch=>{
+      ch.addEventListener('change', ()=>{
+        const v = ch.getAttribute('data-http');
+        if(ch.checked) state.httpBuckets.add(v); else state.httpBuckets.delete(v);
+        renderShotsGrid();
+      });
+    });
+
+    // ignore import/export
+    document.getElementById('btnDownloadIgnore').addEventListener('click', ()=>{
+      const blob = new Blob([serializeIgnore()], {type:'application/json'});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'ignore.json';
+      a.click(); URL.revokeObjectURL(a.href);
+    });
+    document.getElementById('inputIgnoreFile').addEventListener('change', async (e)=>{
+      const f = e.target.files?.[0]; if(!f) return;
+      const txt = await f.text();
+      try{ const obj = JSON.parse(txt); loadIgnoreFromJSON(obj); renderAll(); }catch{}
+    });
+  }
+
+  function downloadFailsCsv(){
+    if(!state.failures.length){ alert('실패 데이터가 없습니다.'); return; }
+    const header = Object.keys(state.failures[0]);
+    const rows = [header.join(',')].concat(state.failures.map(r=> header.map(h=> csvEscape(r[h])).join(',')));
+    const blob = new Blob([rows.join('\n')], {type:'text/csv'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `capture_failures_${state.date}.csv`;
+    a.click(); URL.revokeObjectURL(a.href);
+  }
+  function csvEscape(v){
+    if(v==null) return '';
+    const s=String(v);
+    if(/[",\n]/.test(s)) return '"'+s.replace(/"/g,'""')+'"';
+    return s;
+  }
+
+  // Kick-off
+  loadAll();
+  </script>
+</body>
+</html>

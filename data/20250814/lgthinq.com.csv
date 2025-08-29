@@ -1,0 +1,42 @@
+Url,Status,Response,Error_Type,Error_Code,Cert_DNS,Cause_Code
+https://common-mqtt-st.ruic.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://common-qa.iot.ruic.lgthinq.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.lgthinq.com, DNS:lgthinq.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://common.iot.ruic.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eic-laundry-dv.lgthinq.com,Invalid,connect ECONNREFUSED 127.0.0.1:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://eic-st-3rdparty.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eu.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hadms-us-dev.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hcss-build.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://he-ru-ai.lgthinq.com,Valid,404 Not Found,none,none,none,none
+https://kic-dv-lss.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kic-laundry-dv.lgthinq.com,Invalid,connect ECONNREFUSED 127.0.0.1:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://kic-laundry.lgthinq.lgthinq.com,Invalid,connect ECONNREFUSED 127.0.0.1:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://kic-st-turn2.lgthinq.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.ard-mud.com, DNS:ard-mud.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://laundry-dv.lgthinq.com,Invalid,connect ECONNREFUSED 127.0.0.1:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://laundry-dv.lgthinq.lgthinq.com,Invalid,connect ECONNREFUSED 127.0.0.1:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://new-eic-ext.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://onpremiss-iot2.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://opip.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://route.laundry.lgthinq.com,Invalid,connect ECONNREFUSED 127.0.0.1:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://ruic.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-common.lgthinq.com,Valid,404 Not Found,none,none,none,none
+https://ruic-internal.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-iotservice.lgthinq.com,Valid,403 Forbidden,none,none,none,none
+https://ruic-laundry.lgthinq.com,Invalid,connect EHOSTUNREACH 31.192.109.154:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://ruic-media.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-mqtt.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-objectstore.lgthinq.com,Valid,403 Forbidden,none,none,none,none
+https://ruic-qa-common.lgthinq.com,Valid,404 Not Found,none,none,none,none
+https://ruic-qa-iotservice.lgthinq.com,Valid,403 Forbidden,none,none,none,none
+https://ruic-qa-objectstore.lgthinq.com,Valid,403 Forbidden,none,none,none,none
+https://ruic-qa-service.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-qa-service-internal.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-report.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-service.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-service-internal.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ruic-t1api.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://usdownload.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://usdownload-dev.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://usdownload-st.lgthinq.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.lgthinq.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://www.lgthinq.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID

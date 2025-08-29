@@ -1,0 +1,1056 @@
+Url,Status,Response,Error_Type,Error_Code,Cert_DNS,Cause_Code
+https://beedev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hive.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lge.com,Valid,200 OK,none,none,none,none
+https://abtvnu.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://acdnus-cdn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://admin.svc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://admin3.srch.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ae.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ae.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://agbps.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://aicc-dev.lge.com,Valid,404 Not Found,none,none,none,none
+https://aicdmz2.lge.com,Invalid,connect EHOSTUNREACH 136.166.4.62:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://aicgwms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://aichub.lge.com,Valid,200 OK,none,none,none,none
+https://aicmobileep.lge.com,Valid,403 Forbidden,none,none,none,none
+https://aicsmtp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://aicubc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://aicubca1ld.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://aicvpn.lge.com,Valid,200 OK,none,none,none,none
+https://ais.lge.com,Valid,200 OK,none,none,none,none
+https://aliiot.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://almmobile.lge.com,Valid,403 Forbidden,none,none,none,none
+https://america.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://amoeic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ams.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://apicubc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://apicubch0ld.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://apicubcs0ld.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://apigw-ext.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://apigw-int.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://appbuild.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://approval.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://approval1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://approval2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://apps.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://aps.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:gsfsplus-india.lge.com, DNS:www.gsfsplus-india.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://apvpc.lge.com,Valid,200 OK,none,none,none,none
+https://ar.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://arlvpn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://arts.lge.com,Invalid,connect ECONNREFUSED 115.89.146.107:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://asmp-aic.lge.com,Invalid,getaddrinfo ENOTFOUND asmp-aic.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://asmp-apic.lge.com,Invalid,getaddrinfo ENOTFOUND asmp-apic.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://asmp-cic.lge.com,Invalid,getaddrinfo ENOTFOUND asmp-cic.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://asmp-eic.lge.com,Invalid,getaddrinfo ENOTFOUND asmp-eic.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://asmp-india.lge.com,Invalid,getaddrinfo ENOTFOUND asmp-india.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://asmp-rus.lge.com,Invalid,getaddrinfo ENOTFOUND asmp-rus.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://aswnus.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://at.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://at.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://atom.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://atsagent.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://au.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://au.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://auction.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://avguide.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://b2becatalog.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://b2bmkt.lge.com,Valid,404 Not Found,none,none,none,none
+https://b2bweb.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://b2bweb-test.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://becon.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://beconcloudai.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:beconcloud.lge.com, DNS:www.beconcloud.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://bestai-e.lge.com,Valid,200 OK,none,none,none,none
+https://bestai-edev.lge.com,Valid,200 OK,none,none,none,none
+https://bestdw.lge.com,Valid,200 OK,none,none,none,none
+https://bin.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bisystem.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bmi-d4.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://br.fbstg.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bris.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:gscs-america.lge.com, DNS:www.gscs-america.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://brms.lge.com,Invalid,connect ECONNREFUSED 165.243.115.67:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://c.911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c.aic.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c.cic.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c.eic.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c.kic.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c.smile.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c4topcoki.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://c4topjoin.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ca.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ca.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ca.lgsalesportal.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:lgclaimportal.com, DNS:www.lgclaimportal.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://care.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://careerschat.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://caris.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://catalog.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ccmobile.lge.com,Valid,403 Forbidden,none,none,none,none
+https://cctv.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cdnorigin.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ces.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ch.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://champ119.ksmo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://changwon.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://changwon.ldap.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://chcrm-bs.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://cheis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cicldap.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cicsso.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cicsso1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cicsso2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cicvpn.lge.com,Valid,200 OK,none,none,none,none
+https://cl.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://cl.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://class.lge.com,Valid,200 OK,none,none,none,none
+https://click.marketing.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://clmmobile.lge.com,Valid,403 Forbidden,none,none,none,none
+https://cloi-studio.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:*.oss-nfr.runpanther.net,ERR_TLS_CERT_ALTNAME_INVALID
+https://cloi-tts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cloiserver-dev.lge.com,Valid,404 Not Found,none,none,none,none
+https://cloiserver-qa.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cloud.marketing.lge.com,Valid,404 Not Found,none,none,none,none
+https://cloudpc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cloudpct.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cls.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://clsap.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://clscn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://clseu.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cn.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://cnmas.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://cnmcbbs.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://cnpls.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://cnt.lge.com,Valid,200 OK,none,none,none,none
+https://co.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://co.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://codejamtest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://collabmobile.lge.com,Valid,403 Forbidden,none,none,none,none
+https://colorpop.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://comdex.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://conflge.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://conlms.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://console.robotelephony.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://contentlibrary.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://contoken.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://cosmo.gtv.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cpaas-dev.robotelephony.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cpc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cpc1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cpfr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cppe.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://csi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://csone.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://csstest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ctotech.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cucm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cups.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cwgpdmfcsedu.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cwldap.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cwsso1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cwsupport.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:moffice.lge.com, DNS:lge.mobizplus.com, DNS:mobileb2e.lge.com, DNS:mobizplus.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://cz.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://cz.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://czkmkt.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dacmots.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dalab.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://das.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://denali.lge.com,Invalid,connect EHOSTUNREACH 125.141.31.167:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://desmbmkt.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dev-apigw-ext.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dev-liveplus-admin.lge.com,Invalid,connect EHOSTUNREACH 125.141.142.92:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://dev-liveplus-api.lge.com,Invalid,connect EHOSTUNREACH 125.141.142.92:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://dev-pcoasvc.lge.com,Invalid,connect ECONNREFUSED 165.186.128.57:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://dev.join.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,DEPTH_ZERO_SELF_SIGNED_CERT
+https://dev.mylgpay.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dev.pis.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://dev.srch.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://dev3.cms.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://devlgmwc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://devsvr.etax.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dgfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dicrs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dk.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://dk.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://dm01.ksut.lge.com,Invalid,getaddrinfo ENOTFOUND dm01.ksut.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://dmds-mms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dmgs.lge.com,Invalid,unable to verify the first certificate,Error,UNABLE_TO_VERIFY_LEAF_SIGNATURE,none,UNABLE_TO_VERIFY_LEAF_SIGNATURE
+https://dmsrouting.lge.com,Valid,200 OK,none,none,none,none
+https://dmsrouting-apic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dmsrouting-eic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dmzpuscs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dmzris.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://dmzsso.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://drm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://drmcp.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:xcpc.lge.com, DNS:www.xcpc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://dv-gfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dv2-aic.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dv2-eic.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dv2-gfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dv2-kic.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dv2-ngfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dv2-upgfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dxboard.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dz.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://dz.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://e-catalog.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://e-health.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://e.lgtalk.lge.com,Invalid,connect ECONNREFUSED 85.114.17.234:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://ebid.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ec.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ecounsel.lge.com,Valid,200 OK,none,none,none,none
+https://ecs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://edge.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eeshven.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://efforts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ehealth.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ehesrm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eic-qt-gfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eic-st2-gfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eic-st2-ngfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eic.scs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eicmobileep.lge.com,Valid,200 OK,none,none,none,none
+https://eiger.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eloqua-dnb.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eloqua-kr.lge.com,Valid,200 OK,none,none,none,none
+https://emanual.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ems.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://emsmail.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://es.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://es.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://esasadc.lge.com,Invalid,connect ECONNREFUSED 52.184.34.162:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://eseal.lge.com,Invalid,connect ECONNREFUSED 165.186.129.232:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://esealdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eshpc.lge.com,Invalid,connect EHOSTUNREACH 195.160.254.124:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://eurd-test.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://europe.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eus.lge.com,Valid,200 OK,none,none,none,none
+https://eutest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://everest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://everestex.everest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ewgtms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ews.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://exch2003.exchg.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://exchg2003.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://expc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://expe.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://exsso.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ext-mvpc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://extgbpstest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://flatron.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://flower.lge.com,Valid,200 OK,none,none,none,none
+https://ftvtot.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://fujiex.fuji.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://fullhd.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://g-crm.lge.com,Invalid,getaddrinfo ENOTFOUND g-crm.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://gccn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gcuv.lge.com,Invalid,connect EHOSTUNREACH 165.186.129.216:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://gems.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gerp.911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gerp.911c.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gewcadc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gfrs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://giant.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://giant01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://giant02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gisso.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://giveaway.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://globalqbot.lge.com,Valid,404 Not Found,none,none,none,none
+https://glodas.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://glopp.lge.com,Valid,200 OK,none,none,none,none
+https://gmcam.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://gmis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gmmsm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gncm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gnms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gp-spo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gp03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gpin.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gscs.lge.com,Valid,200 OK,none,none,none,none
+https://gscs-america.lge.com,Valid,200 OK,none,none,none,none
+https://gscs-b2c-org.lge.com,Valid,200 OK,none,none,none,none
+https://gscs-eu.lge.com,Valid,200 OK,none,none,none,none
+https://gsfs-america.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsfs-america.911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsfs-america.911c.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsfs-asiapac.911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsfs-asiapac.911c.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsfs-china.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://gsfs-china.911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsfsplus.lge.com,Valid,200 OK,none,none,none,none
+https://gsfsplus-america.lge.com,Valid,200 OK,none,none,none,none
+https://gsfsplus-india.lge.com,Valid,200 OK,none,none,none,none
+https://gsrm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gsrmkr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://guide.swcompliance.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gwms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://h5plearning.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ha-dmadmin-st.us.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hacpws.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hapws.lge.com,Valid,404 Not Found,none,none,none,none
+https://harmony.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://harmonygrey.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hesrm.lge.com,Valid,200 OK,none,none,none,none
+https://hilo.lge.com,Invalid,connect ECONNREFUSED 165.243.115.26:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://hlmmobile.lge.com,Valid,403 Forbidden,none,none,none,none
+https://hnahr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://homebuilder.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://homedriveupdate.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hopsprod.lge.com,Valid,200 OK,none,none,none,none
+https://hopsprod2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hopstest.lge.com,Valid,200 OK,none,none,none,none
+https://hr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://hrd.lge.com,Valid,200 OK,none,none,none,none
+https://hu.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://hu.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://hux.lge.com,Invalid,connect EHOSTUNREACH 115.89.146.95:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://hux2003.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://id.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://id.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://id-swfarmhub.lge.com,Valid,403 Forbidden,none,none,none,none
+https://idlicense.lge.com,Valid,200 OK,none,none,none,none
+https://ie.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://iis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ils.lge.com,Valid,200 OK,none,none,none,none
+https://iltmsportal.lge.com,Valid,403 Forbidden,none,none,none,none
+https://imode.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://imode2.lge.com,Invalid,connect ECONNREFUSED 125.141.31.139:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://india.gcuv.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://infinia.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://info.fr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://innovationlab.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://invoiceportal.lge.com,Valid,200 OK,none,none,none,none
+https://ipo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://iportalmobile.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ir.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://irms.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://isc.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://isg.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://isis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://isps.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ispsdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://isupport.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://it.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://it.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://itcss.lge.com,Invalid,connect EHOSTUNREACH 195.160.254.129:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://itlabsvn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://itservice.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://itti.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://java.lge.com,Invalid,connect ECONNREFUSED 115.89.146.91:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://jiri.lge.com,Invalid,connect EHOSTUNREACH 125.141.31.169:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://join.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://jp.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://jp.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://kbtvnu.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kcs.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000102:SSL routines:ssl_choose_client_version:unsupported protocol:../deps/openssl/openssl/ssl/statem/statem_lib.c:1992:
+",Error,EPROTO,none,EPROTO
+https://kcsdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://keystone-dev.lge.com,Valid,502 Bad Gateway,none,none,none,none
+https://kic-qt-gfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kic-qt5-upgfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kic-st-gfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kic-st2-gfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kic-st2-ngfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kic.svc911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kicsec.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kicvpn.lge.com,Valid,200 OK,none,none,none,none
+https://kicvpn2.lge.com,Valid,200 OK,none,none,none,none
+https://kmicms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kmldap.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kmscms81.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kmsso.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kmsso1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kmsso2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kokr-alphabot-asr-v1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kokr-homerobotdev-asr-v1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://krcentadc01.lge.com,Invalid,connect ECONNREFUSED 203.247.145.32:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://krcentadc02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://krems.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ksmo-ecatalog.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kumi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kumi.ldap.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kumiehealth.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lausfut.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lbcs.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://ldap.lgpaydev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap.lgpayqa.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap.lgpayqe.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap.lgpaytest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap.lgpaytmp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap1.lgpay.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ldap2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgads.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgaircon.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lganalyzer.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgaudio.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgcombo.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgcomponent.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgdishwasher.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgdms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgdvd.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgdvdp.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgeai-rw.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamreld00.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo08.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo09.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo10.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo11.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo12.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeamrelo13.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeapexbdex.lge.com,Valid,403 Forbidden,none,none,none,none
+https://lgeapp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeb2bi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgebcs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgebpm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjas01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms01a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms02a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnbjms08.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgecnexbdex.lge.com,Valid,403 Forbidden,none,none,none,none
+https://lgedbp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgedvexbdex.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgeeagle.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeeicb2bi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeelease1q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeelease4q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeaas01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams01a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams02a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams03b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams04a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams04b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeemeams07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeesh.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeglerase0q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgegltase1q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgegltase3q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgehkedm.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:t.edm.watsonswater.com,ERR_TLS_CERT_ALTNAME_INVALID
+https://lgeipas.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrb2bi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcjes01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwas02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwas03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms10.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms11.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwms12.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrcwst01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqah01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas09.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas11.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas13.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas14.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqas15.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqes01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqes02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqes03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqes07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqes09.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqls01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms03a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms03b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms05a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms05b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms08.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms09.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms09a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms10.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms10a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms10b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms11.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms14.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms14a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms14b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms15.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms16.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms18.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms19.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms23.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms24.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms27.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms28.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms28a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms28b.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms29.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms30a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms32.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqms33.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrhqsy01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmas01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmas02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmas03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmas05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmas06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmes01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmes03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms08.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms09.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmms11.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrkmst01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptas02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptas03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptas05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptes01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptes02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptes03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms07.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms08.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms08a.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms09.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptms10.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrptst01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgekrstat01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgelite.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgemailpolicy.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgemailpolicy-stg.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgembrms01s.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgembrms02s.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgemrelse1q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgemrelse3q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgemrelse6q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgemrelse7q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgenet.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgesmtp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgesrchse1q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgesrchse2q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgesrchse3q.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgesycntr.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://lgetaras.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgetc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgett.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://lgeusexbdex.lge.com,Valid,403 Forbidden,none,none,none,none
+https://lgeusnjms01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeusnjms02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeusnjms03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeusnjms04.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeusnjms05.lge.com,Invalid,connect ENETUNREACH 204.79.148.29:443,Error,ENETUNREACH,none,ENETUNREACH
+https://lgeusnjms06.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeusnjms07.lge.com,Invalid,connect ENETUNREACH 204.79.148.81:443,Error,ENETUNREACH,none,ENETUNREACH
+https://lgeusnjms08.lge.com,Invalid,connect ENETUNREACH 204.79.148.82:443,Error,ENETUNREACH,none,ENETUNREACH
+https://lgmonitor.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgmp3p.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgmvserver.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgnetwork.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgodd.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgoptimus.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgoss.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgpatent.lge.com,Valid,200 OK,none,none,none,none
+https://lgpccamera.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgpcscsvc.lge.com,Valid,404 Not Found,none,none,none,none
+https://lgperi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgref.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgrm.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgsecurity.lge.com,Valid,200 OK,none,none,none,none
+https://lgsecurityguard.lge.com,Valid,404 Not Found,none,none,none,none
+https://lgshield.lge.com,Valid,200 OK,none,none,none,none
+https://lgshield-api.lge.com,Valid,404 Not Found,none,none,none,none
+https://lgsiu.lge.com,Valid,404 Not Found,none,none,none,none
+https://lgsmartrefrigerator.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.github.io, DNS:*.github.com, DNS:*.githubusercontent.com, DNS:github.com, DNS:github.io, DNS:githubusercontent.com, DNS:www.github.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://lgsop.lge.com,Valid,200 OK,none,none,none,none
+https://lgsourcing.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgspiv.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgswitching.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgsync.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgtalk.lge.com,Invalid,connect ECONNREFUSED 85.114.17.234:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://lgtipis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgtms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgtrans.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgtsvc.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://lgtv.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgvac.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgvcr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgvcs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgvinstall.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.appguard.co.kr, DNS:appguard.co.kr",ERR_TLS_CERT_ALTNAME_INVALID
+https://lgvinstall-kr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.appguard.co.kr, DNS:appguard.co.kr",ERR_TLS_CERT_ALTNAME_INVALID
+https://lgvmi.lge.com,Valid,200 OK,none,none,none,none
+https://lgvsp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgwashing.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lighthouse.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lionet.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://liu2.lge.com,Valid,200 OK,none,none,none,none
+https://liveplus.lge.com,Invalid,connect EHOSTUNREACH 125.141.142.85:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://liveplus-api.lge.com,Invalid,connect EHOSTUNREACH 125.141.142.85:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://liveplus-db1.lge.com,Invalid,connect EHOSTUNREACH 125.141.142.88:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://liveplus-db2.lge.com,Invalid,connect EHOSTUNREACH 125.141.142.89:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://lms.lge.com,Valid,200 OK,none,none,none,none
+https://lmsm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lrms.lge.com,Invalid,connect ECONNREFUSED 165.243.115.97:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://lrps.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lv.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://lxfs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://m.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://m-iwms.lge.com,Valid,200 OK,none,none,none,none
+https://m-niwms.lge.com,Valid,200 OK,none,none,none,none
+https://m.koreabp.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://m.rms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://maicvpc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail.info.fr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail01.b2bmkt.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail03.b2bmkt.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mailrelay3.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mailsvcagent.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://marcom.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://marketing.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mcbuild.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mcbuild-test.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mckinley.lge.com,Invalid,connect EHOSTUNREACH 125.141.31.173:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://mcloudpc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mcp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mcswcm01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mcswcm05.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mdev-niwms.lge.com,Invalid,connect ECONNREFUSED 165.186.129.154:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://mdm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://media.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://media-dev2.robotelephony.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:*.mq.ap-south-1.on.aws,ERR_TLS_CERT_ALTNAME_INVALID
+https://medialink.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://meet.corp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://meeting.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://membership.lgpay.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://membership.lgpaydev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://membership.lgpayqa.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://membership.lgpaytest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://membership.lgpaytmp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mevs.lge.com,Valid,200 OK,none,none,none,none
+https://mfg.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mfnus.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mgiant.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mglsp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mis.lge.com,Invalid,getaddrinfo ENOTFOUND mis.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://nandadevi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nandadevi2016.nandadevi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nbof.lge.com,Valid,200 OK,none,none,none,none
+https://ncm.lge.com,Invalid,unable to verify the first certificate,Error,UNABLE_TO_VERIFY_LEAF_SIGNATURE,none,UNABLE_TO_VERIFY_LEAF_SIGNATURE
+https://ndesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ndsrm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nepss.lge.com,Valid,200 OK,none,none,none,none
+https://netcastdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://networkmonitor.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://newbest.lge.com,Valid,200 OK,none,none,none,none
+https://newchocolate.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://newehealth.lge.com,Valid,200 OK,none,none,none,none
+https://newlss.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://newlssdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://newseal.lge.com,Valid,403 Forbidden,none,none,none,none
+https://next-eicubc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://next-eicvpc.lge.com,Invalid,connect ECONNREFUSED 195.160.252.152:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://nextvitms.lge.com,Valid,200 OK,none,none,none,none
+https://nl.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://nlbcs.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://nlbs.lge.com,Valid,200 OK,none,none,none,none
+https://nlps.lge.com,Valid,200 OK,none,none,none,none
+https://no.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://no.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://nomubrm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nordic.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://nordic.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://notebookpartner.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://notice.lgsync.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nowim.lge.com,Invalid,connect ECONNREFUSED 125.141.31.132:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://nsfr.lge.com,Valid,200 OK,none,none,none,none
+https://ntams.lge.com,Valid,200 OK,none,none,none,none
+https://nvimc.lge.com,Valid,200 OK,none,none,none,none
+https://nvpc.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:vpc.lge.com, DNS:www.vpc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://nz.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://oasis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://oauthlms.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://oneview.lge.com,Valid,200 OK,none,none,none,none
+https://org-sincere.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://org_devlgmwc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://orgin-globalcareers.lge.com,Valid,200 OK,none,none,none,none
+https://origin-liu.lge.com,Valid,404 Not Found,none,none,none,none
+https://osezlooks.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ospdmdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://owms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://p5control.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://p5mobile.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://p5pad.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pa.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://pa.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://pams.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://partner-org.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:partner.lge.com, DNS:www.partner.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://partnerportal.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://partnerportal-ssl.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://partnerportal.lgpay.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://partnerportal.lgpaydev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://partnerportal.lgpayqa.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://partnerportal.lgpayqe.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://payserver.lgpaytest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://payserver.lgpaytmp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pcacademy.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pcb.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pcc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pclis.lge.com,Invalid,getaddrinfo ENOTFOUND pclis.lge.com,Error,ENOTFOUND,none,ENOTFOUND
+https://pcoasvc.lge.com,Valid,403 Forbidden,none,none,none,none
+https://pcscan.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://pcscanada.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pe.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://pe.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://pi.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://playground.lge.com,Valid,200 OK,none,none,none,none
+https://pri-pems.lge.com,Invalid,connect EHOSTUNREACH 165.186.129.84:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://prinfo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://prismshopper.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://procentricepg.lge.com,Valid,200 OK,none,none,none,none
+https://prod-web1-nep-nsal.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:nbof.lge.com, DNS:www.nbof.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://pt.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ptsso1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ptsso2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pttms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pu-scs.lge.com,Valid,200 OK,none,none,none,none
+https://public.lgtalk.lge.com,Invalid,connect ECONNREFUSED 85.114.17.234:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://purchase.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://purchasinganalysissurvey.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://puscs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pyongtaek.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qa-beconcloud.lge.com,Valid,200 OK,none,none,none,none
+https://qa-bof.lge.com,Valid,200 OK,none,none,none,none
+https://qa-nbof.lge.com,Valid,200 OK,none,none,none,none
+https://qa-ruc.developer.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qa-tms2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qa-web1-nep-nsal.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:qa-nbof.lge.com, DNS:www.qa-nbof.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://qa-web2-nep-nsal.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:qa-nbof.lge.com, DNS:www.qa-nbof.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://qa5.adm.developer.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qa5.developer.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qt-gfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qt-lgtvonline.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qt-ngfts-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qt5-ruc.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qt5-upgfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://qtms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://quiz.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://quizadmin.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://remotecall-aic.lge.com,Invalid,connect ECONNREFUSED 136.166.4.192:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://remotecall-cic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://remotecall-eic.lge.com,Invalid,connect ECONNREFUSED 195.160.254.234:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://remotecallb.lge.com,Invalid,connect ECONNREFUSED 165.244.60.139:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://reverseauction.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://rfwms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ris.lge.com,Valid,200 OK,none,none,none,none
+https://rms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ro.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ro.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://robotpay1.lge.com,Valid,404 Not Found,none,none,none,none
+https://rone-aic.lge.com,Valid,200 OK,none,none,none,none
+https://rone-cic.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://rone-cis.lge.com,Valid,200 OK,none,none,none,none
+https://rone-kic.lge.com,Valid,200 OK,none,none,none,none
+https://rone-kicnip.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://rone-tv-aic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://rone-tv-cic.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://rone-tv-cis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://rone-tv-kic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://rone-tv-kicnip.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://rs.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://rs.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://rtvs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ru.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ru.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://rubyiot.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:*.hidden8games.com,ERR_TLS_CERT_ALTNAME_INVALID
+https://rubyiot-kr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:*.hidden8games.com,ERR_TLS_CERT_ALTNAME_INVALID
+https://rus.lge.com,Valid,200 OK,none,none,none,none
+https://s.lgehkedm.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:t.edm.watsonswater.com,ERR_TLS_CERT_ALTNAME_INVALID
+https://s.th.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sa.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://sa.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://safezone.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sales.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://salesmaster.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://salesportal.lge.com,Invalid,connect ECONNREFUSED 165.186.129.220:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://sao.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://saubcs0ld.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://savpc.lge.com,Valid,200 OK,none,none,none,none
+https://sawaddee.th.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sbc-ims.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://scipkg.lge.com,Valid,403 Forbidden,none,none,none,none
+https://scis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://scmhub.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://scms.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://scs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sdev.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sdss.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sdsstest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://search.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://search1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://search2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://security.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://seoul.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://seoul.ldap.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://service.academy.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sg.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://sg.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://shopmanager.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://shopmanager-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sic.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://signage.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://signlogin.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://signup.lge.com,Valid,200 OK,none,none,none,none
+https://simulation.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sincere.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sip-dev.robotelephony.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:*.mq.ap-south-1.on.aws,ERR_TLS_CERT_ALTNAME_INVALID
+https://sip-dev.robotelephony.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:*.mq.ap-south-1.on.aws,ERR_TLS_CERT_ALTNAME_INVALID
+https://sip.robotelephony.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sip1.robotelephony.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sis.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sixsigma.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sls.lge.com,Invalid,connect ECONNREFUSED 165.243.115.26:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://smartshare.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://smile.lge.com,Valid,200 OK,none,none,none,none
+https://smile.911.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://smile.911c.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://soasadc.lge.com,Invalid,connect ECONNREFUSED 52.148.71.56:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://sprs-ssf.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sps.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:wsvc.lgesps.com, DNS:www.wsvc.lgesps.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://sr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://sr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ssc.lge.com,Invalid,connect EHOSTUNREACH 195.160.254.122:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://ssl-sincere.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ssl.partner.lge.com,Invalid,connect ECONNREFUSED 165.244.60.92:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://sso2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sstg.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st-gfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st-ngfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st-ruc.developer.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st2-aic.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st2-eic.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st2-gfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st2-kic.smartdesk.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st2-ngfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://st2-upgfts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://stage.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://staging.idlicense.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://stg.mylgpay.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://stgadmin3.srch.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://stream.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://strs.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:nsfr.lge.com, DNS:www.nsfr.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://sttmsg-test.lge.com,Valid,403 Forbidden,none,none,none,none
+https://studiolearning.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://su-cdn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://supermulti.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://supplier-collaboration.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://survey.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:learning.lge.com, DNS:glms.lge.com, DNS:hiteleservicehrd.lge.com, DNS:hrd.lge.com, DNS:swmooc.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://sv.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svcagent.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.lg.com, DNS:lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://svcinfo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svcportal.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svcvod.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svlvpn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svmscn.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:lgekrb2bi.lge.com, DNS:www.lgekrb2bi.lge.com, DNS:chrs2.lge.com, DNS:www.chrs2.lge.com, DNS:sealch.lge.com, DNS:www.sealch.lge.com, DNS:chis.lge.com, DNS:www.chis.lge.com, DNS:sim.lg.com.cn, DNS:www.sim.lg.com.cn, DNS:ezretailshop.lge.com, DNS:www.ezretailshop.lge.com, DNS:mdas.lg.com.cn, DNS:www.mdas.lg.com.cn, DNS:dx-view.lg.com.cn, DNS:www.dx-view.lg.com.cn, DNS:weixinfuwuhao.lg.com.cn, DNS:www.weixinfuwuhao.lg.com.cn, DNS:cnmas2.lg.com.cn, DNS:www.cnmas2.lg.com.cn",ERR_TLS_CERT_ALTNAME_INVALID
+https://svmscn.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:lgekrb2bi.lge.com, DNS:www.lgekrb2bi.lge.com, DNS:chrs2.lge.com, DNS:www.chrs2.lge.com, DNS:sealch.lge.com, DNS:www.sealch.lge.com, DNS:chis.lge.com, DNS:www.chis.lge.com, DNS:sim.lg.com.cn, DNS:www.sim.lg.com.cn, DNS:ezretailshop.lge.com, DNS:www.ezretailshop.lge.com, DNS:mdas.lg.com.cn, DNS:www.mdas.lg.com.cn, DNS:dx-view.lg.com.cn, DNS:www.dx-view.lg.com.cn, DNS:weixinfuwuhao.lg.com.cn, DNS:www.weixinfuwuhao.lg.com.cn, DNS:cnmas2.lg.com.cn, DNS:www.cnmas2.lg.com.cn",ERR_TLS_CERT_ALTNAME_INVALID
+https://svpc.lge.com,Invalid,read ECONNRESET,Error,ECONNRESET,none,ECONNRESET
+https://swd.th.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://swedo1.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://swfarmhub.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://swmooc.lge.com,Valid,200 OK,none,none,none,none
+https://system-tools.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://systemtools.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://t.lgehkedm.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:t.edm.watsonswater.com,ERR_TLS_CERT_ALTNAME_INVALID
+https://tams.lge.com,Valid,200 OK,none,none,none,none
+https://tart.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.tart-lge.com, DNS:tart-lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://tart-dcc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tbims.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tbmail.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tcdnus.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tcdnust.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tcdunust.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tce.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://td2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://teleaic.lge.com,Invalid,socket hang up,Error,ECONNRESET,none,ECONNRESET
+https://teleeic.lge.com,Invalid,socket hang up,Error,ECONNRESET,none,ECONNRESET
+https://telekic.lge.com,Invalid,socket hang up,Error,ECONNRESET,none,ECONNRESET
+https://telepresence.lge.com,Valid,200 OK,none,none,none,none
+https://tempclass.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://test-ksut.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://test.ipo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://test.lgtalk.lge.com,Invalid,connect ECONNREFUSED 85.114.17.234:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://test1.au.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://test3.au.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://testbed.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://testgcuv.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://tgcutting.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://th.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://thinqenergy.lge.com,Invalid,unable to verify the first certificate,Error,UNABLE_TO_VERIFY_LEAF_SIGNATURE,none,UNABLE_TO_VERIFY_LEAF_SIGNATURE
+https://tms.eu.lge.com,Valid,200 OK,none,none,none,none
+https://tms2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tmsdev.us.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tmsprod.eu.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:tms.eu.lge.com, DNS:www.tms.eu.lge.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://tmsqa.us.lge.com,Valid,403 Forbidden,none,none,none,none
+https://tmssmtp.us.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tmstest.us.lge.com,Valid,403 Forbidden,none,none,none,none
+https://tn.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://tn.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://toc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://toss.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://tr.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ttchampion.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://ttitforum.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://ttsellout.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ttsms.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://tvappde.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tvcskd.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://tw.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://twtown.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://ua.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://uaenadc.lge.com,Invalid,connect ECONNREFUSED 20.74.131.229:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://ubc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ubc-dm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ubc-ld-dm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ubc-ld-sa.lge.com,Invalid,connect ECONNREFUSED 165.244.64.70:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://uk.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://uk.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://ukcss.lge.com,Invalid,connect EHOSTUNREACH 195.160.254.130:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://uneo.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://uptane.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://us.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://us.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://uscentadc.lge.com,Invalid,connect ECONNREFUSED 40.122.128.154:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://usdash.lge.com,Valid,403 Forbidden,none,none,none,none
+https://usdms.lge.com,Valid,404 Not Found,none,none,none,none
+https://useastadc.lge.com,Invalid,connect ECONNREFUSED 137.135.86.108:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://usldh.lge.com,Valid,404 Not Found,none,none,none,none
+https://uslogistics.lge.com,Valid,403 Forbidden,none,none,none,none
+https://usvpn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://uswestadc.lge.com,Invalid,connect ECONNREFUSED 13.66.250.253:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://utf8.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://v3.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://va-tts.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vcdms.lge.com,Invalid,connect ECONNREFUSED 165.186.129.237:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://vcms.lge.com,Invalid,connect EHOSTUNREACH 165.186.119.201:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://vcs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vcvpn.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vdc.lge.com,Invalid,connect EHOSTUNREACH 121.50.20.80:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://vds.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ve.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vecs.lge.com,Valid,403 Forbidden,none,none,none,none
+https://vfams.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vgps3.lge.com,Valid,200 OK,none,none,none,none
+https://vgps4.lge.com,Valid,200 OK,none,none,none,none
+https://vicms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://videobridge1.dev.join.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,DEPTH_ZERO_SELF_SIGNED_CERT
+https://videobridge1.join.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://videobridge2.dev.join.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:booksbrary.com, DNS:*.booksbrary.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://videobridge2.join.lge.com,Invalid,Client network socket disconnected before secure TLS connection was established,Error,ECONNRESET,none,ECONNRESET
+https://videobridgekr.dev.join.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://view.marketing.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vimdm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vitms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vlmmobile.lge.com,Valid,403 Forbidden,none,none,none,none
+https://vmdm.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vmdms3.lge.com,Valid,200 OK,none,none,none,none
+https://vn.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://vocindia.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpc2.lge.com,Valid,200 OK,none,none,none,none
+https://vpcapp.lge.com,Valid,200 OK,none,none,none,none
+https://vpcdr.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpcsvd-ext-dm01.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpcsvd-ext-dm02.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpcsvd-ext-dm03.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpn2.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpu-gps.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpusnscrp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vscs2.lge.com,Valid,200 OK,none,none,none,none
+https://vserver-c.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vserver-p.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vsms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vsrm.lge.com,Valid,200 OK,none,none,none,none
+https://vst.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wa2.us.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wa3.us.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wa5.us.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wap.lge.com,Invalid,connect ECONNREFUSED 125.141.31.129:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://watercare.rdss.lge.com,Valid,404 Not Found,none,none,none,none
+https://wblearning.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:wblearningnet.com, DNS:www.wblearningnet.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://webosrdc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://webosvdc.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wechattest.lge.com,Invalid,connect ECONNREFUSED 203.148.64.146:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://weeuadc.lge.com,Invalid,connect ECONNREFUSED 52.137.55.123:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://wgtms.lge.com,Invalid,connect EHOSTUNREACH 195.160.254.140:443,Error,EHOSTUNREACH,none,EHOSTUNREACH
+https://wgtmstest.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://whylgtv.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://widget.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://winwin.lge.com,Valid,200 OK,none,none,none,none
+https://www.at.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://www.at.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://www.b2becatalog.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.banner.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.ch.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://www.ch.lge.com,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.register.lg.com, DNS:register.lg.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://www.dev.lge.com,Invalid,connect ECONNREFUSED 165.244.62.249:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://www.e-health.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.eu.gdms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.innovationlab.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.owms.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.signage.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.solardom.lge.com,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://wwwstg-org.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://xcpc.lge.com,Valid,200 OK,none,none,none,none
+https://xgcrs.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://xmpp.lge.com,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none

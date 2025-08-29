@@ -1,0 +1,257 @@
+Url,Status,Response,Error_Type,Error_Code,Cert_DNS,Cause_Code
+https://3dtvguide.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://america.lge.co.kr,Invalid,connect ENETUNREACH 204.79.148.9:443,Error,ENETUNREACH,none,ENETUNREACH
+https://b2b.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://b2becatalog.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://b2csso.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bbs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bcs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://best.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bisystem.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://bs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://builtin.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://caris.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://catalog.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cdn.lge.co.kr,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://cebit.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://changwon.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://china.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://chungjoo.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://chvpn.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cinevu.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cms.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://comdex.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://comedu.lge.co.kr,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+",Error,EPROTO,none,EPROTO
+https://crn.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cshappy.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://cyking.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://devlive.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:kr3.20120714.xyz,ERR_TLS_CERT_ALTNAME_INVALID
+https://digitalsupplier.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dios.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://diosbuiltin.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://diosphoto.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dls2007.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dmzecash.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dreamlg.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://drmlicense.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://dvlp.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://e-catalog.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ebid.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ecash.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ecatalog.lge.co.kr,Invalid,connect ECONNREFUSED 165.244.60.158:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://ecs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ehtls.lge.co.kr,Valid,200 OK,none,none,none,none
+https://emanual.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ems.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://emssend.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://epg.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://europe.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://event.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://export.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://eyesys.digital.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ezclick.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ezmessenger.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://facephone.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://family.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://flatron.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://futurescreen.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://giant.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://gifthouse.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ground220-dev.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:gitlab.bytechtree.com,ERR_TLS_CERT_ALTNAME_INVALID
+https://ground220-stg.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:*.bytechtree.com, DNS:bytechtree.com",ERR_TLS_CERT_ALTNAME_INVALID
+https://hd.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://healthcare.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://helpdesk.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hieis.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://himail.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hiplazahub.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hiplazamail.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hiplazams01.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hiplazams02.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://history.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://hometheater.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ht.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://idea.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://import.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://infinia.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://infinialed.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://infiniatv.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://info.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://investor.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://ir.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://irs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://itti.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://jazz.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kangseo.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kimchi.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kimhae.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://klena.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kumi.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kumi1.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://kumi2.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lex8.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgaircleaner.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgaircon.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgaudio.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgbuiltin.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgcassettep.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgcdr.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgcdrw.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgcom.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgcup.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgdishwasher.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgdvdp.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgeapp.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgebcs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgedbp.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgeehr-se3q.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgerecruit.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgfan.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lggasoven.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgic.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgicrecruit.lge.co.kr,Invalid,connect ECONNREFUSED 165.244.60.155:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://lgicservice.lge.co.kr,Invalid,connect ECONNREFUSED 165.244.60.155:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://lginfinia.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgmicrowave.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgmonitor.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgmp3p.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgnara.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgnetwork.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgnetzine.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgnsys-se1q.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgpack.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgpccamera.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgphone.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgpls.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgref.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgrice.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgrm.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgsnc.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgstudio.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://lgstudiochat.lge.co.kr,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://lgswitching.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgtrans.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgtrnasfer.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgtv.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgvac.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgvideo.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgwalkman.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgwashing.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://lgwb.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://log.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://log6.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://m.lge.co.kr,Invalid,getaddrinfo ENOTFOUND m.lge.co.kr,Error,ENOTFOUND,none,ENOTFOUND
+https://m.lge.co.kr,Invalid,getaddrinfo ENOTFOUND m.lge.co.kr,Error,ENOTFOUND,none,ENOTFOUND
+https://m.lge.co.kr,Invalid,getaddrinfo ENOTFOUND m.lge.co.kr,Error,ENOTFOUND,none,ENOTFOUND
+https://m.lge.co.kr,Invalid,getaddrinfo ENOTFOUND m.lge.co.kr,Error,ENOTFOUND,none,ENOTFOUND
+https://mail.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail.svcagent.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail1.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail11.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail12.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail14.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail15.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail16.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail2.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail22.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mail3.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://master.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mcs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://megaround.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://members.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mis.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://monitor.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mov.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://mp3.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://mpjt.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://navi.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://neowin.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nethard.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://nethardbeta.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://newidea.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://news.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ns.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ns.wm.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://odd.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://open.lge.co.kr,Valid,403 Forbidden,none,none,none,none
+https://partner.lge.co.kr,Invalid,connect ECONNREFUSED 165.244.60.139:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://pcb.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pda.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://plaza.pcb.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pnd.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pongdang.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://preo.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://prinfo.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://prinfonet.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://product.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://project.lge.co.kr,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://projector.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ptscm05.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://purchase.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pushdownload.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://pyungtaik.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://recruit.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://register.ezmessenger.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://roboking.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sales.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sales.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://scs.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://scsic.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://scskm.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://se41.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://secmail.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://security.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://service.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://signage.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://smartappliance.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://soccer.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://social.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,DNS:kr3.20120714.xyz,ERR_TLS_CERT_ALTNAME_INVALID
+https://solar.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://solardom.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://sso.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ssp.lge.co.kr,Invalid,connect ECONNREFUSED 165.244.60.158:443,Error,ECONNREFUSED,none,ECONNREFUSED
+https://stream.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://stylersong.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svc.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://svcagent.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://templar.digital.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tis.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tree.digital.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tromm.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://truth.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://tv.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://twin.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://twins.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://u-life.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://ukvpn.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://usvpn.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vikinglg.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vmarket.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vpn2.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://vrdev.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://vrstg.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,none,CERT_HAS_EXPIRED
+https://webguide.lge.co.kr,Invalid,"write EPROTO 805C1F1F3E7C0000:error:0A000410:SSL routines:ssl3_read_bytes:sslv3 alert handshake failure:../deps/openssl/openssl/ssl/record/rec_layer_s3.c:1605:SSL alert number 40
+",Error,EPROTO,none,EPROTO
+https://wedding.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://whisen.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://whisenac.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wis.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://wow.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www-org.lge.co.kr,Invalid,SSL Issue: consider using the 'Ignore SSL issues' option,NodeSslError,none,"DNS:www.lge.co.kr, DNS:lge.co.kr",ERR_TLS_CERT_ALTNAME_INVALID
+https://www.b2becatalog.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.bid.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.digital.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www.signage.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://www1.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://xcanvas.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://xnote.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://xpion.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://xtick.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://yokchon.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://youngdong.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
+https://youngdong.lge.co.kr,Invalid,timeout of 5000ms exceeded,AxiosError,ECONNABORTED,none,none
