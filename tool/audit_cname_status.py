@@ -316,7 +316,7 @@ async def run(date: str, concurrency: int, timeout: float, retries: int,
         df = await process_csv(checker, p, origin)
         all_df.append(df)
 
-        outfile = outdir / f"report_{origin}_{date}.csv"
+        outfile = outdir / f"cname_fqdn_audit_{origin}.csv"
         df.to_csv(outfile, index=False, encoding="utf-8")
 
         ok = int((df["status"] == "OK").sum())
