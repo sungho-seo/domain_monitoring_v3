@@ -2,21 +2,19 @@
 # -*- coding: utf-8 -*-
 """
 CNAME 대량 검사기 (비동기, 날짜/도메인별 산출물)
-- 스크립트 위치: tool/
-- 입력:   ../data/<DATE>/CNAME_*.csv   (예: CNAME_lge.com.csv)
+- 입력:   ../data/<DATE>/CNAME_*.csv
 - 출력:   ../data/<DATE>/output/report_<domain>_<DATE>.csv
-          (예: report_lge.com_20250829.csv)
+- CSV 헤더: Label/Name,Type,R Data
 
-CSV 형식: Label/Name,Type,R Data
-- Type이 CNAME인 레코드만 검사
-- Label/Name이 상대 이름이면 파일명에서 추론한 origin(도메인)을 붙여 FQDN 변환
-- 기대값(R Data)과 실제 응답 CNAME이 일치하는지 확인
+변경점
+- source_csv 컬럼 제거
+- expected(R Data)가 상대 이름이면 origin 붙여 FQDN으로 확장 후 비교
+- 상대 Label/Name도 확실히 origin을 붙이도록 보강
 """
 
 import argparse
 import asyncio
 import csv
-import datetime as dt
 import os
 import re
 import sys
@@ -29,24 +27,44 @@ import dns.exception
 
 PUBLIC_RESOLVERS = ["8.8.8.8", "1.1.1.1", "9.9.9.9"]
 
+# ---------- utils ----------
 def norm_name(s: str) -> str:
-    return s.strip().rstrip(".").lower()
+    return (s or "").strip().rstrip(".").lower()
 
-def maybe_join_origin(label: str, origin: Optional[str]) -> str:
-    label = (label or "").strip()
-    if not label:
-        return label
-    # 이미 절대이름이면 마지막 점만 정리
-    if label.endswith("."):
-        return label
-    # TLD가 있으면 절대이름으로 보고 마지막 점 붙임
-    if re.search(r"\.[a-zA-Z]{2,}$", label):
-        return label + "."
-    # 상대이름이면 origin 붙임
-    if origin:
-        return f"{label}.{origin}."
-    return label + "."
+_TLD_RE = re.compile(r"\.[a-zA-Z]{2,}$")
 
+def is_fqdn_like(name: str) -> bool:
+    """TLD가 보이면 FQDN 유사로 간주"""
+    return bool(_TLD_RE.search(name))
+
+def to_fqdn(name: str, origin: Optional[str]) -> str:
+    """
+    상대 이름이면 origin을 붙여 절대 이름으로.
+    이미 절대 이름이면 마지막 점만 보정.
+    """
+    n = (name or "").strip()
+    if not n:
+        return n
+    if n.endswith("."):
+        return n
+    if is_fqdn_like(n):
+        return n + "."
+    # 한 라벨(ex: sa-web-us) 또는 'xxx.hlp'같은 내부 서브도메인에도 origin을 붙임
+    return f"{n}.{origin}." if origin else n + "."
+
+def normalize_expected(expected: str, origin: Optional[str]) -> str:
+    """
+    CSV의 R Data가 상대 이름(예: 'sa-web-us')이면 origin을 붙여 비교 공정화.
+    """
+    e = (expected or "").strip().rstrip(".")
+    if not e:
+        return ""
+    if is_fqdn_like(e):
+        return e.lower()
+    # 상대 이름 → 같은 존으로 간주
+    return (f"{e}.{origin}".lower()) if origin else e.lower()
+
+# ---------- DNS checker ----------
 class CNAMEChecker:
     def __init__(self, concurrency: int, timeout: float, retries: int, resolvers: List[str]):
         self.sem = asyncio.Semaphore(concurrency)
@@ -87,138 +105,111 @@ class CNAMEChecker:
             self.cache[key] = res
             return res
 
+# ---------- CSV processing ----------
+def origin_from_filename(csv_path: Path) -> Optional[str]:
+    m = re.match(r"CNAME_(.+)\.csv$", csv_path.name, re.IGNORECASE)
+    return m.group(1) if m else None
+
 async def process_csv(checker: CNAMEChecker, csv_path: Path, origin: str) -> pd.DataFrame:
     rows = []
     tasks = []
-    items: List[Tuple[str, str, str]] = []  # (fqdn, expected_norm, raw_name)
+    items: List[Tuple[str, str, str]] = []  # (fqdn, expected_norm, raw_label)
 
     with csv_path.open(newline="", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         required = {"Label/Name", "Type", "R Data"}
         if not required.issubset(reader.fieldnames or []):
-            raise RuntimeError(f"{csv_path}: CSV 헤더에 {required} 가 필요합니다. 현재: {reader.fieldnames}")
+            raise RuntimeError(f"{csv_path}: CSV 헤더에 {required} 필요. 현재: {reader.fieldnames}")
 
         for line in reader:
             if (line.get("Type") or "").strip().upper() != "CNAME":
                 continue
             raw = (line.get("Label/Name") or "").strip()
-            expected = norm_name(line.get("R Data") or "")
-            fqdn = maybe_join_origin(raw, origin)
-            items.append((fqdn, expected, raw))
+            fqdn = to_fqdn(raw, origin)
+            expected_norm = normalize_expected(line.get("R Data") or "", origin)
+            items.append((fqdn, expected_norm, raw))
             tasks.append(checker.query_cname(fqdn))
 
     results = await asyncio.gather(*tasks)
 
-    for (fqdn, expected, raw), (ok, actual_or_err) in zip(items, results):
-        fqdn_norm = norm_name(fqdn)
+    for (fqdn, expected_norm, raw), (ok, actual_or_err) in zip(items, results):
         if ok:
             actual_norm = norm_name(actual_or_err)
-            status = "OK" if (actual_norm == expected) else "MISMATCH"
+            status = "OK" if (actual_norm == expected_norm) else "MISMATCH"
             rows.append({
-                "source_csv": str(csv_path),
                 "origin": origin,
                 "label_or_name": raw,
-                "fqdn": fqdn_norm,
-                "expected": expected,
+                "fqdn": norm_name(fqdn),
+                "expected": expected_norm,
                 "actual": actual_norm,
                 "status": status,
             })
         else:
             rows.append({
-                "source_csv": str(csv_path),
                 "origin": origin,
                 "label_or_name": raw,
-                "fqdn": fqdn_norm,
-                "expected": expected,
+                "fqdn": norm_name(fqdn),
+                "expected": expected_norm,
                 "actual": "",
                 "status": f"NO_ANSWER ({actual_or_err})",
             })
 
     return pd.DataFrame(rows)
 
-def origin_from_filename(csv_path: Path) -> Optional[str]:
-    # 파일명: CNAME_<domain>.csv → <domain> 추출
-    name = csv_path.name
-    m = re.match(r"CNAME_(.+)\.csv$", name, re.IGNORECASE)
-    if m:
-        return m.group(1)
-    return None
-
 async def run(date: str, concurrency: int, timeout: float, retries: int, resolvers: List[str]) -> None:
-    # 경로 구성 (이 스크립트의 상위 ../data/<DATE>/)
-    script_dir = Path(__file__).resolve().parent
-    data_dir = (script_dir / ".." / "data" / date).resolve()
-    if not data_dir.exists():
-        print(f"[ERROR] 입력 폴더가 없습니다: {data_dir}", file=sys.stderr)
+    base = (Path(__file__).resolve().parent / ".." / "data" / date).resolve()
+    if not base.exists():
+        print(f"[ERROR] 입력 폴더 없음: {base}", file=sys.stderr)
         sys.exit(2)
 
-    output_dir = data_dir / "output"
-    output_dir.mkdir(parents=True, exist_ok=True)
+    outdir = base / "output"
+    outdir.mkdir(parents=True, exist_ok=True)
 
-    # 대상 CSV 수집
-    csv_files = sorted(p for p in data_dir.glob("CNAME_*.csv") if p.is_file())
+    csv_files = sorted(p for p in base.glob("CNAME_*.csv") if p.is_file())
     if not csv_files:
-        print(f"[ERROR] CSV가 없습니다: {data_dir}/CNAME_*.csv", file=sys.stderr)
+        print(f"[ERROR] CSV가 없습니다: {base}/CNAME_*.csv", file=sys.stderr)
         sys.exit(2)
 
-    print(f"[INFO] date={date}")
-    print(f"[INFO] input dir = {data_dir}")
-    print(f"[INFO] output dir= {output_dir}")
-    print(f"[INFO] files     = {[p.name for p in csv_files]}")
+    print(f"[INFO] files: {[p.name for p in csv_files]}")
+    checker = CNAMEChecker(concurrency, timeout, retries, resolvers)
 
-    checker = CNAMEChecker(concurrency=concurrency, timeout=timeout, retries=retries, resolvers=resolvers)
-
-    # 파일별 처리 및 개별 산출물 저장
-    all_df_list: List[pd.DataFrame] = []
-    for csv_path in csv_files:
-        origin = origin_from_filename(csv_path)
+    all_df: List[pd.DataFrame] = []
+    for p in csv_files:
+        origin = origin_from_filename(p) or ""
         if not origin:
-            print(f"[WARN] 도메인을 파일명에서 추출하지 못함: {csv_path.name} (건너뜀)")
+            print(f"[WARN] 파일명에서 도메인을 못 읽음: {p.name} (건너뜀)")
             continue
-        print(f"[INFO] Processing {csv_path.name} (origin={origin})")
-        df = await process_csv(checker, csv_path, origin)
-        all_df_list.append(df)
+        print(f"[INFO] Processing {p.name} (origin={origin})")
+        df = await process_csv(checker, p, origin)
+        all_df.append(df)
 
-        # 도메인별 산출물 저장
-        out_file = output_dir / f"report_{origin}_{date}.csv"
-        df.to_csv(out_file, index=False, encoding="utf-8")
+        # 도메인별 산출물
+        outfile = outdir / f"report_{origin}_{date}.csv"
+        df.to_csv(outfile, index=False, encoding="utf-8")
+
         ok = int((df["status"] == "OK").sum())
-        mismatch = int((df["status"] == "MISMATCH").sum())
-        noans = int((df["status"].str.startswith("NO_ANSWER")).sum())
-        print(f"[DONE] {csv_path.name} -> {out_file.name} | OK:{ok} MISMATCH:{mismatch} NO_ANSWER:{noans}")
+        mm = int((df["status"] == "MISMATCH").sum())
+        na = int((df["status"].str.startswith("NO_ANSWER")).sum())
+        print(f"[DONE] {outfile.name} | OK:{ok} MISMATCH:{mm} NO_ANSWER:{na}")
 
-    # 옵션: 전체 요약도 1개 저장 (원치 않으면 주석 처리)
-    if all_df_list:
-        all_df = pd.concat(all_df_list, ignore_index=True)
-        summary_file = output_dir / f"summary_all_{date}.csv"
-        all_df.to_csv(summary_file, index=False, encoding="utf-8")
-        total = len(all_df)
-        ok = int((all_df["status"] == "OK").sum())
-        mismatch = int((all_df["status"] == "MISMATCH").sum())
-        noans = int((all_df["status"].str.startswith("NO_ANSWER")).sum())
-        print(f"\n==== SUMMARY ({date}) ====")
-        print(f"Total:     {total}")
-        print(f"OK:        {ok}")
-        print(f"MISMATCH:  {mismatch}")
-        print(f"NO_ANSWER: {noans}")
-        print(f"[SAVED] {summary_file.name}")
+    if all_df:
+        summary = pd.concat(all_df, ignore_index=True)
+        summary.to_csv(outdir / f"summary_all_{date}.csv", index=False, encoding="utf-8")
 
 def main():
     ap = argparse.ArgumentParser(description="CNAME 검사 (날짜/도메인별 산출물)")
-    ap.add_argument("--date", required=True, help="날짜(YYYYMMDD)")
-    ap.add_argument("--concurrency", type=int, default=300, help="동시 질의 수 (기본 300)")
-    ap.add_argument("--timeout", type=float, default=3.0, help="DNS 질의 타임아웃 초 (기본 3)")
-    ap.add_argument("--retries", type=int, default=2, help="재시도 횟수 (기본 2)")
-    ap.add_argument("--resolvers", default=",".join(PUBLIC_RESOLVERS),
-                    help=f"리졸버 IP 콤마구분 (기본 {','.join(PUBLIC_RESOLVERS)})")
+    ap.add_argument("--date", required=True, help="YYYYMMDD")
+    ap.add_argument("--concurrency", type=int, default=300)
+    ap.add_argument("--timeout", type=float, default=3.0)
+    ap.add_argument("--retries", type=int, default=2)
+    ap.add_argument("--resolvers", default=",".join(PUBLIC_RESOLVERS))
     args = ap.parse_args()
 
-    resolvers = [ip.strip() for ip in args.resolvers.split(",") if ip.strip()]
-
+    resolvers = [x.strip() for x in args.resolvers.split(",") if x.strip()]
     try:
         asyncio.run(run(args.date, args.concurrency, args.timeout, args.retries, resolvers))
     except KeyboardInterrupt:
-        print("\nInterrupted by user", file=sys.stderr)
+        print("\nInterrupted", file=sys.stderr)
         sys.exit(130)
 
 if __name__ == "__main__":
