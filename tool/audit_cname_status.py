@@ -272,10 +272,11 @@ async def process_csv(checker: CNAMEChecker,
         i, ok, val = await fut
         results[i] = (ok, val)
         done += 1
+        fqdn_i, _, raw_i = items[i]
+        tag = "OK" if ok else "NO_ANSWER"
+        extra = f" -> {val}" if ok else ""
+        
         if checker.verbose:
-            fqdn_i, _, raw_i = items[i]
-            tag = "OK" if ok else "NO_ANSWER"
-            extra = f" -> {val}" if ok else ""
             p(f"[CNAME] {done}/{total} {checker.brief(fqdn_i)} {tag}{extra}")
         elif checker.progress_every and (done % checker.progress_every == 0 or done == total):
             p(f"[PROG] {csv_path.name}: {done}/{total} last={checker.brief(fqdn_i)} {tag}{extra}")
