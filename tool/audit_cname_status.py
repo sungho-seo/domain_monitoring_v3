@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-audit_cname_status.py (FULL)
+audit_cname_status.py (FULL, fixed)
 - 입력:   ../data/<DATE>/CNAME_*.csv
-- 출력:   ../data/<DATE>/output/report_cname_<domain>.csv
-          ../data/<DATE>/output/summary_all.csv
+- 출력:   ../data/<DATE>/output/report_<domain>_<DATE>.csv
+          ../data/<DATE>/output/summary_all_<DATE>.csv  (파일명은 필요시 변경)
 
 판정(status):
 - OK
@@ -159,9 +159,6 @@ class CNAMEChecker:
         n = norm_name(name)
         return any(p.search(n) for p in self.internal_res)
 
-    async def _query_cname_once(self, fqdn: str) -> Optional[str]:
-        return (await self.dns.query(fqdn, "CNAME")) and (await self.dns.query(fqdn, "CNAME"))[0]
-
     async def query_cname(self, fqdn: str) -> Tuple[bool, str]:
         """CNAME 조회 (재시도 포함). (ok, actual or 'no answer')"""
         key = norm_name(fqdn)
@@ -262,15 +259,17 @@ async def process_csv(checker: CNAMEChecker,
     total = len(items)
     p(f"[INFO] {csv_path.name}: querying {total} records...")
 
-    # 1차: CNAME 조회
-    created = [asyncio.create_task(checker.query_cname(fqdn)) for fqdn, _, _ in items]
-    idx_map = {t: i for i, t in enumerate(created)}
+    # 1차: CNAME 조회 (as_completed + 인덱스 반환 방식으로 KeyError 방지)
+    async def cname_job(i: int, fqdn: str):
+        ok, val = await checker.query_cname(fqdn)
+        return i, ok, val
+
+    tasks = [asyncio.create_task(cname_job(i, fqdn)) for i, (fqdn, _, _) in enumerate(items)]
     results: List[Tuple[bool, str]] = [None] * total  # type: ignore
 
     done = 0
-    for t in asyncio.as_completed(created):
-        ok, val = await t
-        i = idx_map[t]
+    for fut in asyncio.as_completed(tasks):
+        i, ok, val = await fut
         results[i] = (ok, val)
         done += 1
         if checker.verbose:
@@ -283,7 +282,7 @@ async def process_csv(checker: CNAMEChecker,
 
     # 1차 결과 정리
     basic_rows = []
-    trace_targets = []  # for rows with actual target (OK/MISMATCH)
+    okmm_rows_for_trace: List[Tuple[dict, str]] = []
     for (fqdn, expected_norm, raw), (ok, actual_or_err) in zip(items, results):
         row = {
             "origin": origin,
@@ -302,34 +301,39 @@ async def process_csv(checker: CNAMEChecker,
             actual_norm = norm_name(actual_or_err)
             row["actual"] = actual_norm
             row["status"] = "OK" if (actual_norm == expected_norm) else "MISMATCH"
-            trace_targets.append((row, actual_norm))
+            okmm_rows_for_trace.append((row, actual_norm))
         else:
             # CNAME 응답 없음 → 문자열 규칙 기반으로 우선 분류
             subtype = checker.classify_no_answer_label_only(fqdn, expected_norm, raw)
             row["status"] = subtype
         basic_rows.append(row)
 
-    # 2차: 체인 추적 (OK/MISMATCH 대상 + 필요 시 NO_ANSWER 세부 확인)
-    #  - OK/MISMATCH 은 실제 target까지 주소 존재 확인
-    #  - NO_ANSWER 그룹은 label-only 분류로 충분하지만, trace_enabled면 FQDN 자체도 확인해서 보정
-    trace_jobs = []
-    for row, target in trace_targets:
-        trace_jobs.append((row, target))
+    # 2차: 체인 추적 (OK/MISMATCH + 필요 시 NO_ANSWER 검증)
+    trace_rows: List[dict] = []
+    trace_targets: List[str] = []
+
+    # OK/MISMATCH 대상
+    for row, target in okmm_rows_for_trace:
+        trace_rows.append(row)
+        trace_targets.append(target)
+
+    # NO_ANSWER들도 추적하여 주소가 있으면 PASS로 완화
     if checker.trace_enabled:
-        # NO_ANSWER들도 추적해서 'ADDR_FOUND'면 PASS로 완화
         for row in basic_rows:
             if row["status"].startswith("NO_ANSWER"):
-                trace_jobs.append((row, row["fqdn"]))
+                trace_rows.append(row)
+                trace_targets.append(row["fqdn"])
 
-    if trace_jobs:
-        tasks = [asyncio.create_task(checker.trace_to_address(target)) for _, target in trace_jobs]
-        t_idx = {t: i for i, t in enumerate(tasks)}
-        t_total = len(tasks)
+    async def trace_job(i: int, target: str):
+        res = await checker.trace_to_address(target)
+        return i, target, res  # (i, target, (final_target, has_addr, addr_types, addr_count, note))
+
+    if trace_targets:
+        t_tasks = [asyncio.create_task(trace_job(i, tgt)) for i, tgt in enumerate(trace_targets)]
         t_done = 0
-        for t in asyncio.as_completed(tasks):
-            final_target, has_addr, addr_types, addr_count, note = await t
-            i = t_idx[t]
-            row, target = trace_jobs[i]
+        for fut in asyncio.as_completed(t_tasks):
+            i, target, (final_target, has_addr, addr_types, addr_count, note) = await fut
+            row = trace_rows[i]
 
             row["final_target"] = final_target
             row["has_address"] = "True" if has_addr else ("False" if note not in ("SKIPPED", "DISABLED") else "Skipped")
@@ -343,10 +347,10 @@ async def process_csv(checker: CNAMEChecker,
 
             t_done += 1
             if checker.verbose:
-                p(f"[TRACE] {t_done}/{t_total} {checker.brief(target)} -> {note}"
+                p(f"[TRACE] {t_done}/{len(t_tasks)} {checker.brief(target)} -> {note}"
                   f"{' (A/AAAA)' if has_addr else ''}")
-            elif checker.progress_every and (t_done % checker.progress_every == 0 or t_done == t_total):
-                p(f"[PROG][TRACE] {csv_path.name}: {t_done}/{t_total}")
+            elif checker.progress_every and (t_done % checker.progress_every == 0 or t_done == len(t_tasks)):
+                p(f"[PROG][TRACE] {csv_path.name}: {t_done}/{len(t_tasks)}")
 
     # 데이터프레임 반환
     return pd.DataFrame(basic_rows)
@@ -407,7 +411,8 @@ async def run(date: str,
         df = await process_csv(checker, csv_path, origin)
         all_df.append(df)
 
-        outfile = outdir / f"report_cname_{origin}.csv"
+        # ↓ 필요 시 여기서 파일명 규칙만 바꾸세요
+        outfile = outdir / f"report_{origin}_{date}.csv"
         df.to_csv(outfile, index=False, encoding="utf-8")
         ok = int((df["status"] == "OK").sum())
         mm = int((df["status"] == "MISMATCH").sum())
@@ -422,7 +427,8 @@ async def run(date: str,
         sys.exit(2)
 
     summary = pd.concat(all_df, ignore_index=True)
-    sumfile = outdir / f"summary_all.csv"
+    # ↓ 필요 시 여기서 summary 파일명만 바꾸세요
+    sumfile = outdir / f"summary_all_{date}.csv"
     summary.to_csv(sumfile, index=False, encoding="utf-8")
 
     s_ok = int((summary["status"] == "OK").sum())
